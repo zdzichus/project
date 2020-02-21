@@ -8,7 +8,7 @@ public class AddressBookTest {
 
 	@Test
 	public void test() {
-		AddressBook book  = new AddressBook();
+		AddressBook book  = new AddressBookMongo();
 		assertEquals(0, book.size());
 		book.addEntry("Dzidek", "123456");
 		assertEquals(1, book.size());
