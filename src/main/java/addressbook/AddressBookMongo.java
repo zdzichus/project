@@ -10,7 +10,7 @@ import java.net.UnknownHostException;
 import com.mongodb.MongoException;
 
 public class AddressBookMongo implements AddressBook {
-     String host ="192.168.0.29" ;
+     String host = "192.168.0.29";
      int port = 27017;
      String dbName = "addressbook";
      String dbUser = "zdzichudb";
