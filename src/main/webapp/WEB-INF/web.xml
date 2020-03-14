@@ -8,5 +8,4 @@
     <servlet-name>addressBookServlet</servlet-name>
     <url-pattern>/addressBookServlet</url-pattern>
   </servlet-mapping>
-
 </web-app>
