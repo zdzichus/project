@@ -16,7 +16,7 @@ public class AddressBookMongo implements AddressBook {
      String dbUser = "zdzichudb";
      String dbPassword = "kwiatek33";
  	
-	public void addEntry(String firstName, String phone) {
+	public void addEntry(String firstName, String phone, String country, String city, String surname) {
 		DBCollection addressCollection = getAddressCollection();
 		
 		addressCollection.insert(new BasicDBObject(firstName, phone));

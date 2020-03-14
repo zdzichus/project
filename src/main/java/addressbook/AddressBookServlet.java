@@ -16,9 +16,13 @@ import javax.servlet.http.HttpServletResponse;
         	
         	String firstName = request.getParameter("firstName");
         	String phone = request.getParameter("phone");
+        	String surname = request.getParameter("surname");
+        	String city = request.getParameter("city");
+        	String country = request.getParameter("country");
         	
-        	book.addEntry(firstName, phone);   	
+        	
+        	book.addEntry(firstName,phone ,surname ,city ,country);   	
     
-        	response.getWriter().println("Added " + firstName + ", there are now " + book.size() + "entries" );
+        	response.getWriter().println("Added " + country +"Added " + phone +"Added " + surname +"Added " + firstName + ", there are now " + book.size() + "entries" );
         }
 }
