@@ -8,14 +8,5 @@
     <servlet-name>addressBookServlet</servlet-name>
     <url-pattern>/addressBookServlet</url-pattern>
   </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>FormResultsProcess</display-name>
-    <servlet-name>FormResultsProcess</servlet-name>
-    <servlet-class>addressbook.FormResultsProcess</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>FormResultsProcess</servlet-name>
-    <url-pattern>/FormResultsProcess</url-pattern>
-  </servlet-mapping>
+
 </web-app>
