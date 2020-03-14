@@ -17,6 +17,8 @@ public class AddressBookMongo implements AddressBook {
      String dbPassword = "kwiatek33";
  	
 	public void addEntry(String firstName, String phone, String country, String city, String surname) {
+		
+		
 		//DBCollection addressCollection = getAddressCollection();
 		
 		//addressCollection.insert(new BasicDBObject(firstName, phone));
@@ -24,9 +26,13 @@ public class AddressBookMongo implements AddressBook {
 		
 		BasicDBObject document = new BasicDBObject();
 		document.put(firstName, phone);
-		document.put(country, city);
+	}
+		public void addEntry1(String firstName, String phone, String country, String city, String surname) {
+			BasicDBObject document1 = new BasicDBObject();	
+		document1.put(country, city);
 		
 	}
+	
 
 	
 	

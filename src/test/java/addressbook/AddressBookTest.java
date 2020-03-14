@@ -12,7 +12,7 @@ public class AddressBookTest {
 	    // assertEquals(expected, actual);   
 		assertEquals(book.size(), book.size());
 		book.addEntry("Dzidek", "123456","Dzidek", "123456","Dzidek");
-		book.addEntry("Dzidek1", "1234561","Dzidek1", "1234561","Dzidek1");
+		book.addEntry1("Dzidek1", "1234561","Dzidek1", "1234561","Dzidek1");
 		assertEquals(book.size()+2, book.size()+2);
 	}
 
