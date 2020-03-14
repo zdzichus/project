@@ -7,3 +7,12 @@ h1 {
 	font-size: 50px;
 	color: steelblue;
 }
+form {
+	margin: 20px auto;
+	width: 320px;
+	color: steelblue;
+}
+input{
+	padding:10px;
+	font-size: inherit;
+}
