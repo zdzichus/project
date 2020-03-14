@@ -28,6 +28,13 @@ input[type="text"] {
 	width: 100%;
 	border: 2px solid steelblue;
 }
+input[type="radio"] {
+	margin:0px 8px 25px 18px;
+}
 div{
 	padding: 5px;
+}
+input[type="radio"]:checked + label {
+	font-weight: bold;
+	font-size: 18px;
 }
