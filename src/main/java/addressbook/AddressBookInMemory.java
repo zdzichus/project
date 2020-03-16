@@ -1,3 +1,4 @@
+
 package addressbook;
 
 
@@ -16,11 +17,6 @@ public class AddressBookInMemory implements AddressBook {
 	public int size() {
 		
 		return addressMap.size();
-	}
-
-	public void addEntry(String firstName, String phone, String surname, String country, String city) {
-	
-		
 	}
 
 }

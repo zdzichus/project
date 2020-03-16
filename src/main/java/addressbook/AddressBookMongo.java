@@ -16,37 +16,25 @@ public class AddressBookMongo implements AddressBook {
      String dbUser = "zdzichudb";
      String dbPassword = "kwiatek33";
  	
-	public void addEntry(String firstName, String phone, String country, String city, String surname) {
+	public void addEntry(String firstName, String phone) {
+		DBCollection addressCollection = getAddressCollection();
 		
-		DBCollection address = db.getCollection("addresses");
-		BasicDBObject doc = new BasicDBObject ("firstName", firstName)
-				.append("surname", surname)
-				.append("phone", phone)
-				.append("country", country)
-				.append("city", city);
-			
-		 address.insert(doc);
-		 
-		//DBCollection addressCollection = getAddressCollection();
-		
-		//addressCollection.insert(new BasicDBObject(firstName, phone));
-		//addressCollection.insert(new BasicDBObject());
-		
-	}	
+		addressCollection.insert(new BasicDBObject(firstName, phone));
+	}
+
+	
 	
 	public int size() {
 		DBCollection addressCollection = getAddressCollection();
 		return (int) addressCollection.getCount();
 	}
 
-	public DBCollection getAddressCollection() {
+	private DBCollection getAddressCollection() {
 		try {
 			Mongo mongo = new Mongo(host , port);
 			 DB db = mongo.getDB(dbName);
 			 db.authenticate(dbUser,dbPassword.toCharArray());
 			DBCollection address = db.getCollection("addresses");
-			
-			
 			return address;
 		} catch (UnknownHostException e) {
 			throw new RuntimeException(e);
@@ -55,11 +43,5 @@ public class AddressBookMongo implements AddressBook {
 		
 	}
 	}
-
-	public void addEntry(String firstName, String phone) {
-		// TODO Auto-generated method stub
-		
-	}
 }
 	
-
