@@ -14,7 +14,7 @@ import com.mongodb.DBCollection;
 	
 	public static final long serialVersionUID = 1L;
 		AddressBook book = new AddressBookMongo();
-         
+		DBCollection address = db.getCollection("addresses"); 
         public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         	
         	String firstName = request.getParameter("firstName");
@@ -25,7 +25,7 @@ import com.mongodb.DBCollection;
         	
         	
         	//book.addEntry(firstName,phone ,surname ,city ,country);  
-    		DBCollection address = db.getCollection("addresses");
+    	
     		BasicDBObject doc = new BasicDBObject ("firstName", firstName)
     				.append("surname", surname)
     				.append("phone", phone)
