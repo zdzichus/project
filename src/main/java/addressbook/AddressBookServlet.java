@@ -7,6 +7,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.mongodb.BasicDBObject;
+import com.mongodb.DBCollection;
+
  public class AddressBookServlet extends HttpServlet {
 	
 	public static final long serialVersionUID = 1L;
@@ -21,7 +24,15 @@ import javax.servlet.http.HttpServletResponse;
         	String country = request.getParameter("country");
         	
         	
-        	book.addEntry(firstName,phone ,surname ,city ,country);   	
+        	//book.addEntry(firstName,phone ,surname ,city ,country);  
+    		DBCollection address = db.getCollection("addresses");
+    		BasicDBObject doc = new BasicDBObject ("firstName", firstName)
+    				.append("surname", surname)
+    				.append("phone", phone)
+    				.append("country", country)
+    				.append("city", city);
+    			
+    		 address.insert(doc);
     
         	response.getWriter().println("Added " + country +"Added " + phone +"Added " + surname +"Added " + firstName + ", there are now " + book.size() + "entries" );
         }
