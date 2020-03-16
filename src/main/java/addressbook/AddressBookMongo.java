@@ -55,6 +55,11 @@ public class AddressBookMongo implements AddressBook {
 		
 	}
 	}
+
+	public void addEntry(String firstName, String phone) {
+		// TODO Auto-generated method stub
+		
+	}
 }
 	
 

@@ -13,19 +13,19 @@ import com.mongodb.DBCollection;
  public class AddressBookServlet extends HttpServlet {
 	
 	public static final long serialVersionUID = 1L;
-		AddressBook book = new AddressBookMongo();
+		
 		DBCollection address = db.getCollection("addresses"); 
         public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         	
-        	String firstName = request.getParameter("firstName").toString();
-        	String phone = request.getParameter("phone").toString();
-        	String surname = request.getParameter("surname").toString();
-        	String city = request.getParameter("city").toString();
-        	String country = request.getParameter("country").toString();
+        	String firstName = request.getParameter("firstName");
+        	String phone = request.getParameter("phone");
+        	String surname = request.getParameter("surname");
+        	String city = request.getParameter("city");
+        	String country = request.getParameter("country");
         	
         	
         	//book.addEntry(firstName,phone ,surname ,city ,country);  
-    	
+        	AddressBook book = new AddressBookMongo();
     		BasicDBObject doc = new BasicDBObject ("firstName", firstName)
     				.append("surname", surname)
     				.append("phone", phone)
