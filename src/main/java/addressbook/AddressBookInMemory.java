@@ -26,6 +26,6 @@ public class AddressBookInMemory implements AddressBook {
 	public void addEntry(String firstName, String phone, String surname, String country, String city) {
 		// TODO Auto-generated method stub
 		
-
+	}
 
 }
