@@ -31,7 +31,7 @@ import com.mongodb.DBCollection;
     				.append("phone", phone)
     				.append("country", country)
     				.append("city", city);
-    			
+    		System.out.println(doc);	
     		 address.insert(doc);
     
         	response.getWriter().println("Added " + country +"Added " + phone +"Added " + surname +"Added " + firstName + ", there are now " + book.size() + "entries" );
