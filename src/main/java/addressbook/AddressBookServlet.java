@@ -22,8 +22,7 @@ import javax.servlet.http.HttpServletResponse;
         	String country = request.getParameter("country");
         	String select = request.getParameter("gender");
         
-        	
-        	
+        	        	
         	String[] myStringArray = new String[] 
             { request.getParameter("firstName"), 
               request.getParameter("phone"), 
@@ -32,8 +31,8 @@ import javax.servlet.http.HttpServletResponse;
               request.getParameter("gender")}; 
                	
         	book.addEntry(surname, myStringArray);   
-    
-        	response.getWriter().println(" Added " + select + ", Added " + surname + ", Added " + firstName + " Added " + phone + " Added " + city + " Added " + country +", there are now " + book.size() + " entries" );
+            response.sendRedirect("display.html");
+        //	response.getWriter().println(" Added " + select + ", Added " + surname + ", Added " + firstName + " Added " + phone + " Added " + city + " Added " + country +", there are now " + book.size() + " entries" );
         	       	
         	
         }
