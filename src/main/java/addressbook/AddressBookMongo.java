@@ -23,13 +23,6 @@ public class AddressBookMongo implements AddressBook {
 	
 	}
 
-	public void addEntry1(String surname, String city) {
-		DBCollection addressCollection = getAddressCollection();
-		
-		
-		addressCollection.insert(new BasicDBObject(surname, city));
-		
-	}
 
 	
 	
