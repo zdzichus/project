@@ -22,9 +22,6 @@ public class AddressBookMongo implements AddressBook {
 		addressCollection.insert(new BasicDBObject(surname, myStringArray));
 	
 	}
-
-
-	
 	
 	public int size() {
 		DBCollection addressCollection = getAddressCollection();
@@ -45,9 +42,6 @@ public class AddressBookMongo implements AddressBook {
 		
 	}
 	}
-
-
-
 
 	public void addEntry(String surname, String string) {
 		// TODO Auto-generated method stub

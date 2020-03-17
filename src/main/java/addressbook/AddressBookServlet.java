@@ -28,7 +28,8 @@ import javax.servlet.http.HttpServletResponse;
             { request.getParameter("firstName"), 
               request.getParameter("phone"), 
               request.getParameter("city"),
-              request.getParameter("country") }; 
+              request.getParameter("country"),
+              request.getParameter("gender")}; 
                	
         	book.addEntry(surname, myStringArray);   
     
