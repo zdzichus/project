@@ -14,15 +14,15 @@ import javax.servlet.http.HttpServletResponse;
          
         public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         	
-        	String firstName = request.getParameter("firstName");
+        	String firstName = request.getParameter("surname");
         	request.getParameter("phone");
-        	String surname = request.getParameter("surname");
+        	String surname = request.getParameter("firstName");
         	request.getParameter("city");
         	request.getParameter("country");
         	
-        	String[] myStringArray = new String[] { "phone", "surname", "city","country" };
+        	String[] myStringArray = new String[] { "firstName", "phone", "city","country" };
         	
-        	book.addEntry(firstName, myStringArray); 
+        	book.addEntry(surname, myStringArray); 
         	
       
     

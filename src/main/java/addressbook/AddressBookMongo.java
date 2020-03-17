@@ -16,10 +16,10 @@ public class AddressBookMongo implements AddressBook {
      String dbUser = "zdzichudb";
      String dbPassword = "kwiatek33";
  	
-	public void addEntry(String firstName, String[] myStringArray) {
+	public void addEntry(String surname, String[] myStringArray) {
 		DBCollection addressCollection = getAddressCollection();
 		
-		addressCollection.insert(new BasicDBObject(firstName, myStringArray));
+		addressCollection.insert(new BasicDBObject(surname, myStringArray));
 	
 	}
 
@@ -49,7 +49,7 @@ public class AddressBookMongo implements AddressBook {
 
 
 
-	public void addEntry(String firstName, String string) {
+	public void addEntry(String surname, String string) {
 		// TODO Auto-generated method stub
 		
 	}

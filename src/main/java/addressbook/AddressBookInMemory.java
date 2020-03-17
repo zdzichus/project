@@ -9,8 +9,8 @@ public class AddressBookInMemory implements AddressBook {
 	private Map<String, String> addressMap = new HashMap<String, String>();
 	
 	
-	public void addEntry(String firstName, String phone) {
-          addressMap.put(firstName, phone);  
+	public void addEntry(String surname, String phone) {
+          addressMap.put(surname, phone);  
 		
 	}
 
@@ -19,7 +19,7 @@ public class AddressBookInMemory implements AddressBook {
 		return addressMap.size();
 	}
 
-	public void addEntry(String firstName, String[] myStringArray) {
+	public void addEntry(String surname, String[] myStringArray) {
 		// TODO Auto-generated method stub
 		
 	}
