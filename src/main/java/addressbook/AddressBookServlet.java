@@ -15,23 +15,23 @@ import javax.servlet.http.HttpServletResponse;
         public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
          	
          	
-        	String firstName = request.getParameter("surname");
+        	String surname = request.getParameter("surname");
         	String phone = request.getParameter("phone");
-        	String surname = request.getParameter("firstName");
+        	String firstName = request.getParameter("firstName");
         	String city = request.getParameter("city");
-        	String country= request.getParameter("country");
+        	String country = request.getParameter("country");
         	
         	
-        	String[] myStringArray = new String[] { request.getParameter("firstName"), request.getParameter("phone"), request.getParameter("city"),request.getParameter("country") }; 
-       
-        	
-        	book.addEntry(surname, myStringArray); 
-        	
-      
+        	String[] myStringArray = new String[] 
+            { request.getParameter("firstName"), 
+              request.getParameter("phone"), 
+              request.getParameter("city"),
+              request.getParameter("country") }; 
+               	
+        	book.addEntry(surname, myStringArray);   
     
         	response.getWriter().println("Added " + surname + ", Added " + firstName + " Added " + phone + " Added " + city + " Added " + country +", there are now " + book.size() + " entries" );
-        	
-        	
+        	       	
         	
         }
 }

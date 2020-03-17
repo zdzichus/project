@@ -2,7 +2,7 @@ package addressbook;
 
 public interface AddressBook {
 
-	void addEntry(String firstName, String[] myStringArray);
+	void addEntry(String surname, String[] myStringArray);
 
 	int size();
 
