@@ -22,7 +22,7 @@ import javax.servlet.http.HttpServletResponse;
         	String country= request.getParameter("country");
         	
         	
-        	String[] myStringArray = new String[] { "firstName", "phone", "city","country" }; 
+        	String[] myStringArray = new String[] { request.getParameter("firstName"), request.getParameter("phone"), request.getParameter("city"),request.getParameter("country") }; 
        
         	
         	book.addEntry(surname, myStringArray); 
