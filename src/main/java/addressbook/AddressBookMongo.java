@@ -20,6 +20,15 @@ public class AddressBookMongo implements AddressBook {
 		DBCollection addressCollection = getAddressCollection();
 		
 		addressCollection.insert(new BasicDBObject(firstName, phone));
+	
+	}
+
+	public void addEntry1(String surname, String city) {
+		DBCollection addressCollection = getAddressCollection();
+		
+		
+		addressCollection.insert(new BasicDBObject(surname, city));
+		
 	}
 
 	

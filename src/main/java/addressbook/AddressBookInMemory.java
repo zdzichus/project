@@ -19,4 +19,9 @@ public class AddressBookInMemory implements AddressBook {
 		return addressMap.size();
 	}
 
+	public void addEntry1(String surname, String city) {
+		 addressMap.put(surname, city); 
+		
+	}
+
 }
