@@ -20,8 +20,10 @@ import javax.servlet.http.HttpServletResponse;
         	String firstName = request.getParameter("firstName");
         	String city = request.getParameter("city");
         	String country = request.getParameter("country");
+        	String male = request.getParameter("male");
+        	String female = request.getParameter("female");
         	
-        	String gender = request.getParameter("gender");
+        	
         	String[] myStringArray = new String[] 
             { request.getParameter("firstName"), 
               request.getParameter("phone"), 
@@ -30,7 +32,7 @@ import javax.servlet.http.HttpServletResponse;
                	
         	book.addEntry(surname, myStringArray);   
     
-        	response.getWriter().println("Added " + gender + ", Added " + surname + ", Added " + firstName + " Added " + phone + " Added " + city + " Added " + country +", there are now " + book.size() + " entries" );
+        	response.getWriter().println(" Added " + female + " Added " + male + ", Added " + surname + ", Added " + firstName + " Added " + phone + " Added " + city + " Added " + country +", there are now " + book.size() + " entries" );
         	       	
         	
         }
