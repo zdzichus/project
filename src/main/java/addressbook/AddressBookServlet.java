@@ -11,16 +11,18 @@ import javax.servlet.http.HttpServletResponse;
 	
 	public static final long serialVersionUID = 1L;
 		AddressBook book = new AddressBookMongo();
-         
+		String[] myStringArray = new String[] { "firstName", "phone", "city","country" };
+		
         public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        	
+         	
+         	
         	String firstName = request.getParameter("surname");
         	request.getParameter("phone");
         	String surname = request.getParameter("firstName");
         	request.getParameter("city");
         	request.getParameter("country");
         	
-        	String[] myStringArray = new String[] { "firstName", "phone", "city","country" };
+       
         	
         	book.addEntry(surname, myStringArray); 
         	
