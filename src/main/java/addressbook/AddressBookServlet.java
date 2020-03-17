@@ -29,7 +29,7 @@ import javax.servlet.http.HttpServletResponse;
         	
       
     
-        	response.getWriter().println("Added " + surname +", Added " + firstName + "Added " + phone + "Added " + city + "Added " + country +", there are now " + book.size() + "entries" );
+        	response.getWriter().println("Added " + surname + ", Added " + firstName + " Added " + phone + " Added " + city + " Added " + country +", there are now " + book.size() + " entries" );
         	
         	
         	
