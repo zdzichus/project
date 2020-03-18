@@ -39,13 +39,13 @@ import javax.servlet.http.HttpServletResponse;
           	  out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">"); 
           	  out.println("</head>");
           	  		out.println("<body>");
-          	  		out.println("<input type=\"text\" name=\"select\" />");
-          	  		out.println("<input type=\"text\" name=\"surname\" />");   	  		
+          	  		out.println("<li> Surname: "+ request.getParameter("surname")+ "\n");
+          	  		out.println("<li> Gender: "+ request.getParameter("gender")+ "\n");  	  		
           	  		out.println("</body>");
           	  out.println("</html>");
           	  out.close();
           	  
-          	  out.println(" Added " + select + ", Added " + surname + ", Added " + firstName + " Added " + phone + " Added " + city + " Added " + country +", there are now " + book.size() + " entries" );
+          	//  out.println(" Added " + select + ", Added " + surname + ", Added " + firstName + " Added " + phone + " Added " + city + " Added " + country +", there are now " + book.size() + " entries" );
               
         }    	
      
