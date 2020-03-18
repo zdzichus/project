@@ -1,6 +1,7 @@
 package addressbook;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -30,10 +31,17 @@ import javax.servlet.http.HttpServletResponse;
               request.getParameter("country"),
               request.getParameter("gender")}; 
                	
-        	book.addEntry(surname, myStringArray);   
-            response.sendRedirect("display.html");
-        //	response.getWriter().println(" Added " + select + ", Added " + surname + ", Added " + firstName + " Added " + phone + " Added " + city + " Added " + country +", there are now " + book.size() + " entries" );
-        	       	
-        	
-        }
+		        	book.addEntry(surname, myStringArray);   
+		            response.sendRedirect("display.html");
+		            response.setContentType("text/html");
+		            
+	            		PrintWriter out = response.getWriter();
+		            	out.println("<title>Display</title>" );
+		            	out.println("<h1>Display entries</h1>"); 
+		            	out.println(" Added " + select + ", Added " + surname + ", Added " + firstName + " Added " + phone + " Added " + city + " Added " + country +", there are now " + book.size() + " entries" );
+		
+		          
+        
+        }   
+        
 }
