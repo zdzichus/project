@@ -30,9 +30,9 @@ import javax.servlet.http.HttpServletResponse;
               request.getParameter("country"),
               request.getParameter("gender")}; 
               book.addEntry(surname, myStringArray); 
-              response.sendRedirect("display.html");
-          	  PrintWriter out = response.getWriter();
-          	  out.append(" Added " + select + ", Added " + surname + ", Added " + firstName + " Added " + phone + " Added " + city + " Added " + country +", there are now " + book.size() + " entries" );
+              PrintWriter out = response.getWriter();
+          	 
+          	  out.println(" Added " + select + ", Added " + surname + ", Added " + firstName + " Added " + phone + " Added " + city + " Added " + country +", there are now " + book.size() + " entries" );
               
         }    	
      
