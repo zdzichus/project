@@ -25,7 +25,7 @@ import javax.servlet.http.HttpServletResponse;
               request.getParameter("city"),
               request.getParameter("country"),
               request.getParameter("gender")}; 
-               	book.addEntry(surname, myStringArray);   
+              book.addEntry(surname, myStringArray);   
 		             
         }   
     	public void doPost(HttpServletRequest request, HttpServletResponse response) 
