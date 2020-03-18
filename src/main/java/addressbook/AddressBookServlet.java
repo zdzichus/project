@@ -29,9 +29,22 @@ import javax.servlet.http.HttpServletResponse;
               request.getParameter("city"),
               request.getParameter("country"),
               request.getParameter("gender")}; 
-              book.addEntry(surname, myStringArray); 
-              PrintWriter out = response.getWriter();
-          	 
+              book.addEntry(surname, myStringArray);
+              
+              response.setContentType("text/html");
+          	  PrintWriter out = response.getWriter();
+          	  out.println("<html>");
+          	  out.println("<head>");
+          	  out.println("<meta charset=\"UTF-8\">");  
+          	  out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">"); 
+          	  out.println("</head>");
+          	  		out.println("<body>");
+          	  		out.println("<input type=\"text\" name=\"select\" />");
+          	  		out.println("<input type=\"text\" name=\"surname\" />");   	  		
+          	  		out.println("</body>");
+          	  out.println("</html>");
+          	  out.close();
+          	  
           	  out.println(" Added " + select + ", Added " + surname + ", Added " + firstName + " Added " + phone + " Added " + city + " Added " + country +", there are now " + book.size() + " entries" );
               
         }    	
