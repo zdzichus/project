@@ -12,17 +12,12 @@ import javax.servlet.http.HttpServletResponse;
 	
 	public static final long serialVersionUID = 1L;
 		AddressBook book = new AddressBookMongo();
-		  
-        public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+        public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
          	
          	
         	String surname = request.getParameter("surname");
-        	String phone = request.getParameter("phone");
-        	String firstName = request.getParameter("firstName");
-        	String city = request.getParameter("city");
-        	String country = request.getParameter("country");
-        	String select = request.getParameter("gender");
-        
+             
         	        	
         	String[] myStringArray = new String[] 
             { request.getParameter("firstName"), 
@@ -30,18 +25,29 @@ import javax.servlet.http.HttpServletResponse;
               request.getParameter("city"),
               request.getParameter("country"),
               request.getParameter("gender")}; 
-               	
-		        	book.addEntry(surname, myStringArray);   
-		            response.sendRedirect("display.html");
-		            response.setContentType("text/html");
-		            
-	            		PrintWriter out = response.getWriter();
-		            	out.println("<title>Display</title>" );
-		            	out.println("<h1>Display entries</h1>"); 
-		             	out.println(" Added " + select + ", Added " + surname + ", Added " + firstName + " Added " + phone + " Added " + city + " Added " + country +", there are now " + book.size() + " entries" );
-		
-		          
-        
+               	book.addEntry(surname, myStringArray);   
+		             
         }   
+    	public void doPost(HttpServletRequest request, HttpServletResponse response) 
+    			throws ServletException, IOException {
+    		
+    	   	
+        	String surname = request.getParameter("surname");
+        	String phone = request.getParameter("phone");
+        	String firstName = request.getParameter("firstName");
+        	String city = request.getParameter("city");
+        	String country = request.getParameter("country");
+        	String select = request.getParameter("gender");
+        
+      
+    		  response.sendRedirect("display.html");
+              response.setContentType("text/html");
+           
+       		PrintWriter out = response.getWriter();
+           	out.println("<title>Display</title>" );
+           	out.println("<h1>Display entries</h1>"); 
+            	out.append(" Added " + select + ", Added " + surname + ", Added " + firstName + " Added " + phone + " Added " + city + " Added " + country +", there are now " + book.size() + " entries" );
+    	}
+      
         
 }
