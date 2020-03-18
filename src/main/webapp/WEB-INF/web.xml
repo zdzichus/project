@@ -6,6 +6,6 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>addressBookServlet</servlet-name>
-    <url-pattern>/display.html</url-pattern>
+    <url-pattern>/display</url-pattern>
   </servlet-mapping>
 </web-app>
