@@ -7,7 +7,7 @@
         <link rel="stylesheet" type="text/css" href="style.css">	
 		</head>
 			<body>
-			<h2>Enter:</h2>
+			<h2>Enter Dupa:</h2>
 			<form action="addressbook" method="POST">
 				 
 				<input type="text" name="select" />
