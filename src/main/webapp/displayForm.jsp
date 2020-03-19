@@ -7,27 +7,15 @@
         <link rel="stylesheet" type="text/css" href="style.css">	
 		</head>
 			<body>
-			<h2>Enter Dupa:</h2>
+			<h2>Display Form:</h2>
 			<form action="addressbook" method="POST">
 				 
-				<input type="text" name="select" />
-				<input type="text" name="surname" />
+							 
+				Gender <input type="text" name="select" value ="kicha" >
+				Surname <input type="text" name="surname" value = "kicha1">
 				
 				
 			</form>
-			
-			 PrintWriter out = response.getWriter();
-          	  out.println("<html>");
-          	  out.println("<head>");
-          	  out.println("<meta charset=\"UTF-8\">");  
-          	  out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">"); 
-          	  out.println("</head>");
-          	  		out.println("<body>");
-          	  		out.println("<li> Surname: "+ request.getParameter("surname")+ "\n");
-          	  		out.println("<li> Gender: "+ request.getParameter("gender")+ "\n");  	  		
-          	  		out.println("</body>");
-          	  out.println("</html>");
-          	  out.close();
 			
 		</body>
 
