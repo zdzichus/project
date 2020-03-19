@@ -3,6 +3,7 @@ package addressbook;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -13,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 	public static final long serialVersionUID = 1L;
 		AddressBook book = new AddressBookMongo();
 		
-        public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
          	
          	
         	String surname = request.getParameter("surname");
@@ -22,31 +23,29 @@ import javax.servlet.http.HttpServletResponse;
         	String city = request.getParameter("city");
         	String country = request.getParameter("country");
         	String select = request.getParameter("gender"); 
-        	        	
-        	String[] myStringArray = new String[] 
-            { request.getParameter("firstName"), 
-              request.getParameter("phone"), 
-              request.getParameter("city"),
-              request.getParameter("country"),
-              request.getParameter("gender")}; 
-              book.addEntry(surname, myStringArray);
-              
-              response.setContentType("text/html");
-          	  PrintWriter out = response.getWriter();
-          	  out.println("<html>");
-          	  out.println("<head>");
-          	  out.println("<meta charset=\"UTF-8\">");  
-          	  out.println("<link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">"); 
-          	  out.println("</head>");
-          	  		out.println("<body>");
-          	  		out.println("<li> Surname: "+ request.getParameter("surname")+ "\n");
-          	  		out.println("<li> Gender: "+ request.getParameter("gender")+ "\n");  	  		
-          	  		out.println("</body>");
-          	  out.println("</html>");
-          	  out.close();
-          	  
-          	//  out.println(" Added " + select + ", Added " + surname + ", Added " + firstName + " Added " + phone + " Added " + city + " Added " + country +", there are now " + book.size() + " entries" );
-              
+        	   if (surname.isEmpty() || phone.isEmpty() || firstName.isEmpty() ||
+        		   city.isEmpty() || country.isEmpty() || select.isEmpty() )  
+        	   {
+        		   RequestDispatcher req = request.getRequestDispatcher("index.jsp");
+       			   req.include(request, response);
+        	   }
+        	   else
+        	   {
+        		   String[] myStringArray = new String[] 
+        		            { request.getParameter("firstName"), 
+        		              request.getParameter("phone"), 
+        		              request.getParameter("city"),
+        		              request.getParameter("country"),
+        		              request.getParameter("gender")}; 
+        		              book.addEntry(surname, myStringArray);
+        		   
+        		   RequestDispatcher req = request.getRequestDispatcher("displayForm.jsp");
+       			   req.forward(request, response);
+       			   
+        	   }
+        	   
+          	 
+          	 
         }    	
      
         
