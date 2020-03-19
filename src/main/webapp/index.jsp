@@ -1,14 +1,17 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
-	<html>
-		<head>
-		<meta charset="UTF-8">
-		<title>Zdzich</title>
-        <link rel="stylesheet" type="text/css" href="style.css">	
-		</head>
-			<body>
-			<h1>Simple Form</h1>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Dzidek</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+<h1>Simple Form</h1>
 			<h2>Entry details: </h2>
-				<form action="addressBookServlet">
+				<form method ="post" action="addressBookServlet">
 				Name <input type="text" name="firstName"> <br>
 				Surname <input type="text" name="surname"> <br> 
 				Phone <input type="text" name="phone"> <br>
@@ -26,5 +29,5 @@
 				</div>
 				
 				</form>
-			</body>
-	</html>
+</body>
+</html>
