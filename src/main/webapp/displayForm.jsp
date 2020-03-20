@@ -18,7 +18,7 @@
           <th>Gender</th>
         </tr>
           <tr>
-            <td><%= request.getParameter("name") %></td>
+            <td><%= request.getParameter("firstName") %></td>
             <td><%= request.getParameter("surname") %></td>
             <td><%= request.getParameter("phone") %></td>
             <td><%= request.getParameter("gender") %></td>
