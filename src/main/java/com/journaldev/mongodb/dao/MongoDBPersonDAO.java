@@ -1,5 +1,6 @@
 
 package com.journaldev.mongodb.dao;
+import com.mongodb.DB;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,8 +22,16 @@ public class MongoDBPersonDAO {
 
 	private DBCollection col;
 
+	//@SuppressWarnings("deprecation")
 	public MongoDBPersonDAO(MongoClient mongo) {
-		this.col = mongo.getDB("journaldev").getCollection("Persons");
+		this.col = mongo.getDB("addressbook").getCollection("Persons");
+		
+		 String dbUser = "zdzichudb";
+	     String dbPassword = "kwiatek33";
+	     String dbName = "addressbook";
+	     DB db = mongo.getDB(dbName);
+		 db.authenticate(dbUser,dbPassword.toCharArray());
+	     
 	}
 
 	public Person createPerson(Person p) {
