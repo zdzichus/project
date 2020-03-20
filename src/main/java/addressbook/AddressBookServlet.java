@@ -49,7 +49,8 @@ import com.mongodb.DBObject;
        			   req.forward(request, response);
        			
        			System.out.println("1. Find first matched document");
- 			    book.readEntry(surname, myStringArray);
+       		    System.out.print(person_table);
+ 			    System.out.print(myStringArray);
  			    System.out.println(book); 
  			    
  			//   System.out.println("\n1. Find all matched documents");
