@@ -19,7 +19,7 @@ import com.mongodb.DBObject;
 	public static final long serialVersionUID = 1L;
 		AddressBook book = new AddressBookMongo();
 		
-        @SuppressWarnings("null")
+      
 		public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
          	
          	String person_table ="PERSON";
@@ -53,15 +53,31 @@ import com.mongodb.DBObject;
        			       			       
        		             System.out.print(person_table);
  			             System.out.print(myStringArray[2]);
- 			             DBCursor cursor = null;
- 			             while(cursor.hasNext())
- 					     {
- 					        System.out.println(cursor.next());
- 					     }
+ 			            
  			          	} 
-        	 
-        }     
+        	     
+			     }
+             
                  	   
-}    	
+   
+ 
+	   public void readAllEntry(DBCollection AddressBookMongo) {
+		DBCollection addressCollection = getAddressCollection();
+		 DBCursor cursor= addressCollection.find();
+		  while(cursor.hasNext())
+		   {
+		        System.out.println(cursor.next());
+		   }
+}
+
+
+
+
+	public DBCollection getAddressCollection() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+ }
+	
         
         
