@@ -19,7 +19,7 @@
             <td><%= request.getParameter("select") %></td>
             <td><%= request.getParameter("Surname") %></td>
             <td><%= request.getParameter("phone") %></td>
-            <td><%= rset.getInt("XXXX") %></td>
+            <td><%= request.getParameter("XXXXXX") %></td>
           </tr>
    </table>
 			<form action="addressbook" method="POST">
