@@ -9,6 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.mongodb.DBCollection;
+import com.mongodb.DBObject;
+
  public class AddressBookServlet extends HttpServlet {
 	
 	public static final long serialVersionUID = 1L;
@@ -44,12 +47,26 @@ import javax.servlet.http.HttpServletResponse;
         		   
         		   RequestDispatcher req = request.getRequestDispatcher("displayForm.jsp");
        			   req.forward(request, response);
+       			
+       			System.out.println("1. Find first matched document");
+ 			    book.readEntry(surname, myStringArray);
+ 			    System.out.println(book); 
+ 			    
+ 			//   System.out.println("\n1. Find all matched documents");
+ 			 //  DBCursor cursor = collection.find();
+ 			  // while (cursor.hasNext()) {
+ 				//System.out.println(cursor.next());
+ 			 // }
        			   
-        	   }
+           }
         	   
-          	 
-          	 
-        }    	
      
+        
+        
+        
+             
+        	   
+}    	
+    		
         
 }

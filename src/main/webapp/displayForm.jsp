@@ -3,7 +3,7 @@
 	<html>
 		<head>
 		<meta charset="UTF-8">
-		<title></title>
+		<title>DzidekDisplay</title>
         <link rel="stylesheet" type="text/css" href="style.css">	
 		</head>
 			<body>
@@ -16,6 +16,8 @@
 				
 				
 			</form>
+			
+			  
 			
 		</body>
 
