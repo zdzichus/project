@@ -17,7 +17,7 @@
         </tr>
           <tr>
             <td><%= request.getParameter("select") %></td>
-            <td><%= request.getParameter("Surname") %></td>
+            <td><%= request.getParameter("surname") %></td>
             <td><%= request.getParameter("phone") %></td>
             <td><%= request.getParameter("XXXXXX") %></td>
           </tr>
