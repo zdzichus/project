@@ -45,29 +45,12 @@ import com.mongodb.DBObject;
         		              request.getParameter("gender")}; 
         		           book.addEntry(person_table, myStringArray);
         		   
-        		   RequestDispatcher req = request.getRequestDispatcher("displayForm.jsp");
-       			   req.forward(request, response);
-       			
-       			       System.out.println("1. Find first matched document");
+        		           RequestDispatcher req = request.getRequestDispatcher("displayForm.jsp");
+        		           req.forward(request, response);
+       			       			       
        		           System.out.print(person_table);
- 			           System.out.print(myStringArray[2]);
- 			   
- 			    
- 			//   System.out.println("\n1. Find all matched documents");
- 			 //  DBCursor cursor = collection.find();
- 			  // while (cursor.hasNext()) {
- 				//System.out.println(cursor.next());
- 			 // }
-       			   
-           }
-        	   
-     
-        
-        
-        
-             
+ 			           System.out.print(myStringArray[2]);		   
+           }     
         	   
 }    	
-    		
-        
 }

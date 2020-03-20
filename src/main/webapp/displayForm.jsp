@@ -11,14 +11,12 @@
 			<form action="addressbook" method="POST">
 				 
 							 
-				Gender <input type="text" name="select" value ="kicha" >
-				Surname <input type="text" name="surname" value = "kicha1">
-				
+				Gender <input type="text" name="select" value ="<% =request.getParameter("select") %>">
+				Surname <input type="text" name="surname" value = "<% =request.getParameter("surname") %>">
+				Phone <input type="text" name="phone" value = ""<% =request.getParameter("phone") %>"">
 				
 			</form>
-			
-			  
-			
+						
 		</body>
 
 	</html>
