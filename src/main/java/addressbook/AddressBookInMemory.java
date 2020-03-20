@@ -24,6 +24,12 @@ public class AddressBookInMemory implements AddressBook {
 		
 	}
 
+	@Override
+	public void readEntry(String surname, String[] myStringArray) {
+		// TODO Auto-generated method stub
+		
+	}
+
 
 
 
