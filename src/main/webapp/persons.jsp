@@ -14,20 +14,20 @@ table,th,td {
 </head>
 <body>
 	<%-- Person Add/Edit logic --%>
-	<c:if test="${requestScope.error ne null}">
+	
 		<strong style="color: red;"><c:out
 				value="${requestScope.error}"></c:out></strong>
-	</c:if>
-	<c:if test="${requestScope.success ne null}">
+	
+	
 		<strong style="color: green;"><c:out
 				value="${requestScope.success}"></c:out></strong>
-	</c:if>
+	
 	<c:url value="/addPerson" var="addURL"></c:url>
 	<c:url value="/editPerson" var="editURL"></c:url>
 
 	<%-- Edit Request --%>
-	<c:if test="${requestScope.person ne null}">
-		<form action='<c:out value="${editURL}"></c:out>' method="post">
+	
+		<form action='<out value="${editURL}"></out>' method="post">
 			ID: <input type="text" value="${requestScope.person.id}"
 				readonly="readonly" name="id"><br> Name: <input
 				type="text" value="${requestScope.person.name}" name="name"><br>
@@ -35,19 +35,19 @@ table,th,td {
 				name="country"><br> <input type="submit"
 				value="Edit Person">
 		</form>
-	</c:if>
+	
 
 	<%-- Add Request --%>
-	<c:if test="${requestScope.person eq null}">
+	
 		<form action='<c:out value="${addURL}"></c:out>' method="post">
 			Name: <input type="text" name="name"><br> Country: <input
 				type="text" name="country"><br> <input type="submit"
 				value="Add Person">
 		</form>
-	</c:if>
+	
 
 	<%-- Persons List Logic --%>
-	<c:if test="${not empty requestScope.persons}">
+	
 		<table>
 			<tbody>
 				<tr>
@@ -76,6 +76,6 @@ table,th,td {
 				</c:forEach>
 			</tbody>
 		</table>
-	</c:if>
+	
 </body>
 </html>
