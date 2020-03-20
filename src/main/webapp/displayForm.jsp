@@ -11,9 +11,9 @@
 			<form action="addressbook" method="POST">
 				 
 							 
-				Gender <input type="text" name="select" value ="<% =request.getParameter("select") %>">
-				Surname <input type="text" name="surname" value = "<% =request.getParameter("surname") %>">
-				Phone <input type="text" name="phone" value = ""<% =request.getParameter("phone") %>"">
+				Gender <input type="text" name="select" value ="<% "select" %>">
+				Surname <input type="text" name="surname" value = "<% "surname" %>">
+				Phone <input type="text" name="phone" value = ""<% "phone" %>"">
 				
 			</form>
 						
