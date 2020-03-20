@@ -50,7 +50,7 @@ import com.mongodb.DBObject;
        			
        			       System.out.println("1. Find first matched document");
        		           System.out.print(person_table);
- 			           System.out.println(myStringArray);
+ 			           System.out.print(myStringArray[2]);
  			   
  			    
  			//   System.out.println("\n1. Find all matched documents");
