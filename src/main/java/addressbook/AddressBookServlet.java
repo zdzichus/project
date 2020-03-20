@@ -48,10 +48,10 @@ import com.mongodb.DBObject;
         		   RequestDispatcher req = request.getRequestDispatcher("displayForm.jsp");
        			   req.forward(request, response);
        			
-       			System.out.println("1. Find first matched document");
-       		    System.out.print(person_table);
- 			    System.out.print(myStringArray);
- 			    System.out.println(book); 
+       			       System.out.println("1. Find first matched document");
+       		           System.out.print(person_table);
+ 			           System.out.println(myStringArray);
+ 			   
  			    
  			//   System.out.println("\n1. Find all matched documents");
  			 //  DBCursor cursor = collection.find();
