@@ -25,13 +25,7 @@ public class MongoDBPersonDAO {
 	//@SuppressWarnings("deprecation")
 	public MongoDBPersonDAO(MongoClient mongo) {
 		this.col = mongo.getDB("addressbook").getCollection("Persons");
-		
-		 String dbUser = "zdzichudb";
-	     String dbPassword = "kwiatek33";
-	     String dbName = "addressbook";
-	     DB db = mongo.getDB(dbName);
-		 db.authenticate(dbUser,dbPassword.toCharArray());
-	     
+			     
 	}
 
 	public Person createPerson(Person p) {
