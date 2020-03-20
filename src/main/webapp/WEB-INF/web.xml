@@ -1,11 +1,21 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
-  <servlet>
-    <servlet-name>addressBookServlet</servlet-name>
-    <servlet-class>addressbook.AddressBookServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>addressBookServlet</servlet-name>
-    <url-pattern>/addressBookServlet</url-pattern>
-  </servlet-mapping>
+<web-app xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+	xmlns="https://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="https://java.sun.com/xml/ns/javaee https://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>addressbook</display-name>
+	
+	<context-param>
+		<param-name>MONGODB_HOST</param-name>
+		<param-value>192.168.0.29</param-value>
+	</context-param>
+	<context-param>
+		<param-name>MONGODB_PORT</param-name>
+		<param-value>27017</param-value>
+	</context-param>
+	
+	<welcome-file-list>
+		<welcome-file>persons.jsp</welcome-file>
+	</welcome-file-list>
 </web-app>
