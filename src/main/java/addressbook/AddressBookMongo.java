@@ -28,6 +28,7 @@ public class AddressBookMongo implements AddressBook {
 	
 	}
 	
+
 	public void readAllEntry(DBCollection AddressBookMongo) {
 		DBCollection addressCollection = getAddressCollection();
 		 DBCursor cursor= addressCollection.find();

@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.mongodb.BasicDBObject;
 import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;
 import com.mongodb.DBObject;
@@ -53,30 +54,21 @@ import com.mongodb.DBObject;
        			       			       
        		             System.out.print(person_table);
  			             System.out.print(myStringArray[2]);
- 			            
+ 			             
  			          	} 
         	     
 			     }
-             
+            
                  	   
-   
+		private static void setUpTestData(DBCollection AddressBookMongo) {
+		    for (int i=1; i <= 10; i++) {
+		    	AddressBookMongo.insert(new BasicDBObject().append("employeeId", i).append("employeeName", "TestEmployee_"+i));
+		    }
+		}
+		
  
-	   public void readAllEntry(DBCollection AddressBookMongo) {
-		DBCollection addressCollection = getAddressCollection();
-		 DBCursor cursor= addressCollection.find();
-		  while(cursor.hasNext())
-		   {
-		        System.out.println(cursor.next());
-		   }
-}
 
 
-
-
-	public DBCollection getAddressCollection() {
-		// TODO Auto-generated method stub
-		return null;
-	}
  }
 	
         
