@@ -22,8 +22,8 @@ table,th,td {
 		<strong style="color: green;"><c:out
 				value="${requestScope.success}"></c:out></strong>
 	
-	<c:url value="/addPerson" var="addURL"></c:url>
-	<c:url value="/editPerson" var="editURL"></c:url>
+	<url value="/addPerson" var="addURL"></url>
+	<url value="/editPerson" var="editURL"></url>
 
 	<%-- Edit Request --%>
 	
