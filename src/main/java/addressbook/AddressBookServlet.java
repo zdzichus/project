@@ -1,5 +1,6 @@
 package addressbook;
 
+import java.awt.Cursor;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -10,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.mongodb.DBCollection;
+import com.mongodb.DBCursor;
 import com.mongodb.DBObject;
 
  public class AddressBookServlet extends HttpServlet {
@@ -48,9 +50,13 @@ import com.mongodb.DBObject;
         		           RequestDispatcher req = request.getRequestDispatcher("displayForm.jsp");
         		           req.forward(request, response);
        			       			       
-       		           System.out.print(person_table);
- 			           System.out.print(myStringArray[2]);		   
-           }     
-        	   
+       		             System.out.print(person_table);
+ 			             System.out.print(myStringArray[2]);
+ 			             
+ 			          	} 
+        	 
+        }     
+                 	   
 }    	
-}
+        
+        

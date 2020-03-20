@@ -15,12 +15,16 @@
           <th>Name</th>
           <th>Surname</th>
           <th>Phone</th>
+          <th>City</th>
+          <th>Country</th>
           <th>Gender</th>
         </tr>
           <tr>
             <td><%= request.getParameter("firstName") %></td>
             <td><%= request.getParameter("surname") %></td>
             <td><%= request.getParameter("phone") %></td>
+            <td><%= request.getParameter("city") %></td>
+            <td><%= request.getParameter("country") %></td>
             <td><%= request.getParameter("gender") %></td>
           </tr>
    </table>

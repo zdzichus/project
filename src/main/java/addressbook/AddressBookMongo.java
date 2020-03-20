@@ -3,6 +3,7 @@ package addressbook;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
+import com.mongodb.DBCursor;
 import com.mongodb.Mongo;
 
 import java.net.UnknownHostException;
@@ -26,11 +27,14 @@ public class AddressBookMongo implements AddressBook {
 		addressCollection.insert(new BasicDBObject(person_table, myStringArray));
 	
 	}
-	public void readEntry(String person_table, String[] myStringArray) {
+	
+	public void readAllEntry(DBCollection AddressBookMongo) {
 		DBCollection addressCollection = getAddressCollection();
-		addressCollection.findOne();
-		//addressCollection.insert(new BasicDBObject(person_table, myStringArray));
-	    // DBCursor cursor = collection.find(); 
+		 DBCursor cursor= addressCollection.find();
+		  while(cursor.hasNext())
+		   {
+		        System.out.println(cursor.next());
+		   }
 	}
 	
 	public int size() {
@@ -54,6 +58,13 @@ public class AddressBookMongo implements AddressBook {
 	}
 
 	public void addEntry(String surname, String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void readEntry(String surname, String[] myStringArray) {
 		// TODO Auto-generated method stub
 		
 	}
