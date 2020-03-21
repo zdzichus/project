@@ -36,21 +36,19 @@ import javax.servlet.http.HttpServletResponse;
         		   
         		  String[] myStringArray = new String[] 
         		            { 
-        		              request.getParameter("surname"),		
-        		              request.getParameter("firstName"), 
+        		             request.getParameter("surname"),		
+        		             request.getParameter("firstName"), 
         		             request.getParameter("phone"), 
-        		              request.getParameter("city"),
+        		             request.getParameter("city"),
         		             request.getParameter("country"),
         		             request.getParameter("gender")}; 
         		             book.addEntry(person_table, myStringArray);
         		          
-        		           RequestDispatcher req = request.getRequestDispatcher("displayForm.jsp");
-        		           req.forward(request, response);
+        		             RequestDispatcher req = request.getRequestDispatcher("displayForm.jsp");
+        		             req.forward(request, response);
         		           
-        		           System.out.print( book.readEntry());	
-        		         
-        		          
-        		          System.out.println(  book.readAllEntry());	
+        		             System.out.print( book.readEntry());	  		           
+        		             System.out.print( book.readAllEntry());	
         		        
 
         	   }         
