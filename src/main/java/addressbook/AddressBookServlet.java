@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
  public class AddressBookServlet extends HttpServlet {
 	
 	public static final long serialVersionUID = 1L;
@@ -30,23 +31,31 @@ import javax.servlet.http.HttpServletResponse;
         	   }
         	   else
         	   {
-        		  
-        		   String[] myStringArray = new String[] 
+        		   
+        		    
+        		   
+        		  String[] myStringArray = new String[] 
         		            { 
         		              request.getParameter("surname"),		
         		              request.getParameter("firstName"), 
-        		              request.getParameter("phone"), 
+        		             request.getParameter("phone"), 
         		              request.getParameter("city"),
-        		              request.getParameter("country"),
-        		              request.getParameter("gender")}; 
-        		              book.addEntry(person_table, myStringArray);
+        		             request.getParameter("country"),
+        		             request.getParameter("gender")}; 
+        		             book.addEntry(person_table, myStringArray);
         		          
         		           RequestDispatcher req = request.getRequestDispatcher("displayForm.jsp");
         		           req.forward(request, response);
-       			       		       
-        		          
+        		           
+        		         Object document = book.readEntry();
+        		         System.out.println( document);		
+        		        
+
+        	   }         
+        		         
  			           System.out.print( book.readEntry());		   
            }     
+        	   
         	   
         }    	
 

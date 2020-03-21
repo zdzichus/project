@@ -1,16 +1,21 @@
 package addressbook;
 
+import java.net.UnknownHostException;
+
+import org.w3c.dom.Document;
+
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
+import com.mongodb.DBCursor;
 import com.mongodb.DBObject;
 import com.mongodb.Mongo;
-
-import java.net.UnknownHostException;
-
 import com.mongodb.MongoException;
 
+
+
 public class AddressBookMongo implements AddressBook {
+	
      String host = "192.168.0.29";
      int port = 27017;
      String dbName = "addressbook";
@@ -26,6 +31,15 @@ public class AddressBookMongo implements AddressBook {
 		addressCollection.insert(new BasicDBObject(person_table, myStringArray));
 	
 	}
+	public static void AllRecords(DBCollection addressCollection)
+	{
+		DBCursor cursor = addressCollection.find();
+		  while(cursor.hasNext())
+          {
+              System.out.println(cursor.next());
+          }
+	}
+	
 	public DBObject readEntry() {
 		DBCollection addressCollection = getAddressCollection();
 		return (DBObject) addressCollection.findOne();
@@ -53,6 +67,11 @@ public class AddressBookMongo implements AddressBook {
 	}
 
 	public void addEntry(String surname, String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public static void AllRecords(String person_table, String[] myStringArray) {
 		// TODO Auto-generated method stub
 		
 	}
