@@ -4,5 +4,25 @@
 	<classpathentry kind="src" path="java"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="C:/Users/Zdzichu/.m2/repository/javax/servlet/servlet-api/3.0-alpha-1/servlet-api-3.0-alpha-1.jar" sourcepath="C:/Users/Zdzichu/.m2/repository/javax/servlet/servlet-api/3.0-alpha-1/servlet-api-3.0-alpha-1-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="org.eclipse.jst.component.nondependency" value=""/>
+			<attribute name="maven.groupId" value="javax.servlet"/>
+			<attribute name="maven.artifactId" value="servlet-api"/>
+			<attribute name="maven.version" value="3.0-alpha-1"/>
+			<attribute name="maven.scope" value="provided"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/Zdzichu/.m2/repository/org/mongodb/mongo-java-driver/2.7.3/mongo-java-driver-2.7.3.jar" sourcepath="C:/Users/Zdzichu/.m2/repository/org/mongodb/mongo-java-driver/2.7.3/mongo-java-driver-2.7.3-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="org.eclipse.jst.component.archivename" value="mongo-java-driver-2.7.3.jar"/>
+			<attribute name="maven.groupId" value="org.mongodb"/>
+			<attribute name="maven.artifactId" value="mongo-java-driver"/>
+			<attribute name="maven.version" value="2.7.3"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
