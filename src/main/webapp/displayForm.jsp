@@ -26,9 +26,14 @@
             <td><%= request.getParameter("country") %></td>
             <td><%= request.getParameter("phone") %></td>
             <td><%= request.getParameter("gender") %></td>
+            
+           
           </tr>
    </table>
+    
+            
 			</form>
+			
 		</body>
 
 	</html>
