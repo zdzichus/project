@@ -35,9 +35,9 @@ public class AddressBookMongo implements AddressBook {
 		DBCollection addressCollection = getAddressCollection();
 		DBCursor cursor = addressCollection.find();
 		           while(cursor.hasNext()) {		 
-                    cursor.next();  
+		           System.out.println(cursor.next());  
           }
-		 return (DBObject) cursor.next();
+		 return (DBObject) addressCollection.find();
 				  
 	}
 	
