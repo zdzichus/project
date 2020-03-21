@@ -49,17 +49,17 @@ import javax.servlet.http.HttpServletResponse;
         		             request.getParameter("country"),
         		             request.getParameter("gender")}; 
         		             book.addEntry(person_table, myStringArray);
-        		          
-        		             RequestDispatcher req = request.getRequestDispatcher("displayForm.jsp");
-        		             req.forward(request, response);
-        		             
-        		             System.out.print( book.readEntry());	 
-        		            
         		             try {
         		             	 out.println("<p> Wsztskie wpisy " + (book.readAllEntry()) + ")</p>");
-					
+					                       
+        		             
         		             }finally {out.close();
         		             }
+        		             RequestDispatcher req = request.getRequestDispatcher("displayForm.jsp");
+        		             req.forward(request, response);
+        		             System.out.print( book.readEntry());	 
+        		            
+        		            
 
         	   }         
         		         
