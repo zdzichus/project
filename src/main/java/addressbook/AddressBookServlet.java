@@ -50,7 +50,7 @@ import javax.servlet.http.HttpServletResponse;
         		           System.out.print( book.readEntry());	
         		         
         		          Object document1 = book.readAllEntry();
-        		          System.out.println( document1);	
+        		          System.out.print( document1);	
         		        
 
         	   }         
