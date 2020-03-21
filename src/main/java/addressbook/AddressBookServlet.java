@@ -9,6 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.mongodb.DBCollection;
+import com.mongodb.DBObject;
+
  public class AddressBookServlet extends HttpServlet {
 	
 	public static final long serialVersionUID = 1L;
@@ -42,14 +45,12 @@ import javax.servlet.http.HttpServletResponse;
         		              request.getParameter("gender")}; 
         		           book.addEntry(person_table, myStringArray);
         		   
-        		   RequestDispatcher req = request.getRequestDispatcher("displayForm.jsp");
-       			   req.forward(request, response);
-       			   
-        	   }
+        		           RequestDispatcher req = request.getRequestDispatcher("displayForm.jsp");
+        		           req.forward(request, response);
+       			       			       
+       		           System.out.print(person_table);
+ 			           System.out.print(myStringArray[2]);		   
+           }     
         	   
-          	 
-          	 
-        }    	
-     
-        
+}    	
 }

@@ -26,13 +26,19 @@ public class AddressBookMongo implements AddressBook {
 		addressCollection.insert(new BasicDBObject(person_table, myStringArray));
 	
 	}
+	public void readEntry(String person_table, String[] myStringArray) {
+		DBCollection addressCollection = getAddressCollection();
+		addressCollection.findOne();
+		//addressCollection.insert(new BasicDBObject(person_table, myStringArray));
+	    // DBCursor cursor = collection.find(); 
+	}
 	
 	public int size() {
 		DBCollection addressCollection = getAddressCollection();
 		return (int) addressCollection.getCount();
 	}
 
-	private DBCollection getAddressCollection() {
+	public DBCollection getAddressCollection() {
 		try {
 			Mongo mongo = new Mongo(host , port);
 			 DB db = mongo.getDB(dbName);
