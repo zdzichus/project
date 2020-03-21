@@ -47,16 +47,15 @@ import javax.servlet.http.HttpServletResponse;
         		           RequestDispatcher req = request.getRequestDispatcher("displayForm.jsp");
         		           req.forward(request, response);
         		           
-        		         Object document = book.readEntry();
-        		         System.out.println( document);	
+        		           System.out.print( book.readEntry());	
         		         
-        		         Object document1 = book.readAllEntry();
-        		         System.out.println( document1);	
+        		          Object document1 = book.readAllEntry();
+        		          System.out.println( document1);	
         		        
 
         	   }         
         		         
- 			           System.out.print( book.readEntry());		   
+ 			         	   
            }     
         	   
         	   
