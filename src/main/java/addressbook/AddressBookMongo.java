@@ -33,14 +33,13 @@ public class AddressBookMongo implements AddressBook {
 	}
 	public DBObject readAllEntry(){
 		DBCollection addressCollection = getAddressCollection();
-		return (DBObject) addressCollection.find();
-		//DBCursor cursor = addressCollection.find();
-		 // while(cursor.hasNext())
-         // {		 
-            //  System.out.println(cursor.next());
-          //    return (DBObject) addressCollection.find(); 
-        //  }
 		
+		  DBCursor cursor = addressCollection.find();
+		   while(cursor.hasNext()) {		 
+              System.out.println(cursor.next());
+             
+          }
+		   return (DBObject) addressCollection.find();
 				  
 	}
 	
