@@ -11,6 +11,7 @@ import com.mongodb.DBCursor;
 import com.mongodb.DBObject;
 import com.mongodb.Mongo;
 import com.mongodb.MongoException;
+import com.sun.tools.javac.jvm.Items;
 
 
 
@@ -31,14 +32,20 @@ public class AddressBookMongo implements AddressBook {
 		addressCollection.insert(new BasicDBObject(person_table, myStringArray));
 	
 	}
-	public DBObject readAllEntry(){
+	public String readAllEntry(){
+		StringBuilder items = new StringBuilder();
 		DBCollection addressCollection = getAddressCollection();
 		DBCursor cursor = addressCollection.find();
+		try {
 		           while(cursor.hasNext()) {		 
-		           System.out.println(cursor.next());  
-          }
-		 return (DBObject) addressCollection.find();
-				  
+		           items.append(cursor.next().toString());  
+                   }
+		} finally {
+			
+			cursor.close();
+		}
+		return  items.toString();
+			  
 	}
 	
 	public DBObject readEntry() {
