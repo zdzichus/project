@@ -48,7 +48,10 @@ import javax.servlet.http.HttpServletResponse;
         		           req.forward(request, response);
         		           
         		         Object document = book.readEntry();
-        		         System.out.println( document);		
+        		         System.out.println( document);	
+        		         
+        		         Object document1 = book.readAllEntry();
+        		         System.out.println( document1);	
         		        
 
         	   }         

@@ -31,13 +31,16 @@ public class AddressBookMongo implements AddressBook {
 		addressCollection.insert(new BasicDBObject(person_table, myStringArray));
 	
 	}
-	public static void AllRecords(DBCollection addressCollection)
-	{
+	public DBObject AllRecords(){
+		DBCollection addressCollection = getAddressCollection();
 		DBCursor cursor = addressCollection.find();
 		  while(cursor.hasNext())
-          {
+          {		 
               System.out.println(cursor.next());
+              
           }
+		  return (DBObject) addressCollection.find(); 
+				  
 	}
 	
 	public DBObject readEntry() {
@@ -66,20 +69,16 @@ public class AddressBookMongo implements AddressBook {
 	}
 	}
 
-	public void addEntry(String surname, String string) {
+	@Override
+	public DBObject readAllEntry() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void addEntry(String person_table, String string) {
 		// TODO Auto-generated method stub
 		
 	}
-
-	public static void AllRecords(String person_table, String[] myStringArray) {
-		// TODO Auto-generated method stub
-		
-	}
-
-
-
-
-
 
 
 }
