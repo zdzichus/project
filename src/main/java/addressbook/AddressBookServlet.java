@@ -50,12 +50,6 @@ public class AddressBookServlet extends HttpServlet {
 			out.close();
            
 		}
-
-	}
-
-	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.setContentType("text/html; charset=UTF-8");
-		PrintWriter out = response.getWriter();
 		if (empty_form = false) {
 
 			String stringMale = book.readAllEntry();
@@ -83,6 +77,9 @@ public class AddressBookServlet extends HttpServlet {
 		
 
 		}
+		
 	}
+
+	
 
 }
