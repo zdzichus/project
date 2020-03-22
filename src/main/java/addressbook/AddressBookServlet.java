@@ -41,6 +41,7 @@ public class AddressBookServlet extends HttpServlet {
 			out.println("<link rel='stylesheet' type='text/css' href='style.css'>");
 			out.println("<title>Dzidek1</title></head>");
 			out.println("<body><h1>Database results:</h1>");
+			response.getWriter().println("<h2> there are now " + book.size() + "entries</h1><br>" );
 			out.println("<p> Wsztskie wpisy " + (book.readAllEntry()) + ")</p>");
 			out.println("</body></html>");
 			out.close();
