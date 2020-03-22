@@ -29,13 +29,14 @@ public class AddressBookMongo implements AddressBook {
 	}
 
 	public String readAllEntry() {
+		
 		StringBuilder items = new StringBuilder();
 		DBCollection addressCollection = getAddressCollection();
 		DBCursor cursor = addressCollection.find();
 		try {
 			while (cursor.hasNext()) {
 				items.append(cursor.next().toString());
-				items.append("next_row");
+				
 				
 			}
 		} finally {

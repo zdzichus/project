@@ -5,6 +5,8 @@ package addressbook;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.mongodb.DBObject;
+
 public class AddressBookInMemory implements AddressBook {
 	private Map<String, String> addressMap = new HashMap<String, String>();
 	
@@ -24,10 +26,21 @@ public class AddressBookInMemory implements AddressBook {
 		
 	}
 
-	@Override
 	public void readEntry(String surname, String[] myStringArray) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public DBObject readEntry() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String readAllEntry() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 
