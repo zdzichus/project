@@ -35,6 +35,8 @@ public class AddressBookMongo implements AddressBook {
 		try {
 			while (cursor.hasNext()) {
 				items.append(cursor.next().toString());
+				items.append("next_row");
+				
 			}
 		} finally {
 
@@ -43,6 +45,7 @@ public class AddressBookMongo implements AddressBook {
 		return items.toString();
 
 	}
+	
 
 	public DBObject readEntry() {
 		DBCollection addressCollection = getAddressCollection();
