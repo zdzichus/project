@@ -58,8 +58,9 @@ public class AddressBookServlet extends HttpServlet {
 			empty_form = false;
 			System.out.println(empty_form);            
 		}
+	
 		
-		if (empty_form = false) {
+		if (empty_form == false) {
 			System.out.println("Dupa1");
 	   
 			int countMale = 0;
