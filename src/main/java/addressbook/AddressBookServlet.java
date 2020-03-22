@@ -35,6 +35,12 @@ public class AddressBookServlet extends HttpServlet {
 					request.getParameter("gender") };
 
 			book.addEntry(person_table, myStringArray);
+			out.println("<!DOCTYPE html>");
+	        out.println("<html><head>");
+	        out.println("<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>");
+	        out.println("<link rel='stylesheet' type='text/css' href='style.css'>");	   	        
+	        out.println("<title><h1>Database results</h1></title></head>");
+	        out.println("<body><h2>All Entries:</h2>");
 			out.println("<p> Wsztskie wpisy " + (book.readAllEntry()) + ")</p>");
 			out.close();		
 		}
