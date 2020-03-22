@@ -13,6 +13,7 @@ public class AddressBookServlet extends HttpServlet {
 
 	public static final long serialVersionUID = 1L;
 	AddressBook book = new AddressBookMongo();
+	boolean empty_form;
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html; charset=UTF-8");
@@ -25,52 +26,60 @@ public class AddressBookServlet extends HttpServlet {
 		String city = request.getParameter("city");
 		String country = request.getParameter("country");
 		String select = request.getParameter("gender");
+
 		if (surname.isEmpty() || phone.isEmpty() || firstName.isEmpty() || city.isEmpty() || country.isEmpty()) {
 			RequestDispatcher req = request.getRequestDispatcher("index.jsp");
 			req.include(request, response);
+			empty_form = true;
 
 		} else {
-			String[] myStringArray = new String[] { request.getParameter("surname" ), request.getParameter("firstName"),
+			empty_form = false;
+			String[] myStringArray = new String[] { request.getParameter("surname"), request.getParameter("firstName"),
 					request.getParameter("phone"), request.getParameter("city"), request.getParameter("country"),
 					request.getParameter("gender") };
-					book.addEntry(table_name, myStringArray);
-					book.readAllEntry();
-				    String stringMale = book.readAllEntry();				    
-			        String stringFemale = book.readAllEntry();
-					String wordMale = "\"Male\"]}{";
-					String wordFemale = "\"Female\"]}{";
-					String tempMale[] = stringMale.split(" ");
-					String tempFemale[] = stringFemale.split(" ");
-					int countMale = 0 ;
-					int countFemale = 0;
-					
-					for (int i = 0; i < tempMale.length; i++) {
-			        if (wordMale.equals(tempMale[i])) 
-			            countMale++;
-					}			      	
-					
-					for (int i = 0; i < tempFemale.length; i++) {
-				        if (wordFemale.equals(tempFemale[i])) 
-				            countFemale++;
-						}
-
-			out.println("<!DOCTYPE html>");
+			book.addEntry(table_name, myStringArray);
+            out.println("<!DOCTYPE html>");
 			out.println("<html><head>");
 			out.println("<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>");
 			out.println("<link rel='stylesheet' type='text/css' href='style.css'>");
 			out.println("<title>Dzidek1</title></head>");
 			out.println("<body><h1>Database results:</h1>");
-			response.getWriter().println("<h2> there are now " + book.size() + "entries</h1><br>" );
-			out.println("<h2>Ilosc MALE to " + countMale + "</h2>" );
-			out.println("<h2>Ilosc FEMALE to " + countFemale + "</h2>" );	
-			out.println("<p> Wsztskie wpisy " + (book.readAllEntry()) + ")</p>");
-			out.println("</body></html>");
-			out.close();
- 
+			response.getWriter().println("<h2> there are now " + book.size() + "entries</h1><br>");
+            out.println("<p> Wsztskie wpisy " + (book.readAllEntry()) + ")</p>");
+
 		}
 
 	}
-	
 
-	
+	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setContentType("text/html; charset=UTF-8");
+		PrintWriter out = response.getWriter();
+		if (empty_form = false) {
+
+			String stringMale = book.readAllEntry();
+			String stringFemale = book.readAllEntry();
+			String wordMale = "\"Male\"]}{";
+			String wordFemale = "\"Female\"]}{";
+			String tempMale[] = stringMale.split(" ");
+			String tempFemale[] = stringFemale.split(" ");
+			int countMale = 0;
+			int countFemale = 0;
+
+			for (int i = 0; i < tempMale.length; i++) {
+				if (wordMale.equals(tempMale[i]))
+					countMale++;
+			}
+
+			for (int i = 0; i < tempFemale.length; i++) {
+				if (wordFemale.equals(tempFemale[i]))
+					countFemale++;
+			}
+			out.println("<h2>Ilosc MALE to " + countMale + "</h2>");
+			out.println("<h2>Ilosc FEMALE to " + countFemale + "</h2>");
+			out.println("</body></html>");
+			out.close();
+
+		}
+	}
+
 }
