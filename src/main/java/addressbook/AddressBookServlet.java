@@ -46,7 +46,9 @@ public class AddressBookServlet extends HttpServlet {
 			out.println("<body><h1>Database results:</h1>");
 			response.getWriter().println("<h2> there are now " + book.size() + "entries</h1><br>");
             out.println("<p> Wsztskie wpisy " + (book.readAllEntry()) + ")</p>");
-
+        	out.println("</body></html>");
+			out.close();
+           
 		}
 
 	}
@@ -74,10 +76,11 @@ public class AddressBookServlet extends HttpServlet {
 				if (wordFemale.equals(tempFemale[i]))
 					countFemale++;
 			}
+			System.out.println(countMale);
+			System.out.println(countFemale);
 			out.println("<h2>Ilosc MALE to " + countMale + "</h2>");
 			out.println("<h2>Ilosc FEMALE to " + countFemale + "</h2>");
-			out.println("</body></html>");
-			out.close();
+		
 
 		}
 	}
