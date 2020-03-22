@@ -22,6 +22,8 @@ public class AddressBookServlet extends HttpServlet {
 		String stringFemale = book.readAllEntry();
 		String wordMale = "\"Male\"]}{";
 		String wordFemale = "\"Female\"]}{";
+		int countMale = 0 ;
+		int countFemale = 0 ;
 		String tempMale[] = stringMale.split(" ");
 		String tempFemale[] = stringFemale.split(" ");
 
@@ -34,12 +36,13 @@ public class AddressBookServlet extends HttpServlet {
 		String select = request.getParameter("gender");
 
 		if (surname.isEmpty() || phone.isEmpty() || firstName.isEmpty() || city.isEmpty() || country.isEmpty()) {
+			empty_form = true;
 			RequestDispatcher req = request.getRequestDispatcher("index.jsp");
 			req.include(request, response);
-			empty_form = true;
+			
 
 		} else {
-			
+			empty_form = false;
 			String[] myStringArray = new String[] { request.getParameter("surname"), request.getParameter("firstName"),
 					request.getParameter("phone"), request.getParameter("city"), request.getParameter("country"),
 					request.getParameter("gender") };
@@ -54,21 +57,16 @@ public class AddressBookServlet extends HttpServlet {
             out.println("<p> Wsztskie wpisy " + (book.readAllEntry()) + ")</p>");
         	out.println("</body></html>");
 			out.close();
-			System.out.println("Dupa");
-			empty_form = false;
-			System.out.println(empty_form);            
+			
 		}
-	
-		
 		if (empty_form == false) {
 			System.out.println("Dupa1");
-	   
-			int countMale = 0;
-			int countFemale = 0;
+			System.out.println(countMale);
+			System.out.println(countFemale);   			
 
 			for (int i = 0; i < tempMale.length; i++) {
 				if (wordMale.equals(tempMale[i]))
-					countMale++;
+					countMale = countMale+1;
 			}
 
 			for (int i = 0; i < tempFemale.length; i++) {
@@ -77,9 +75,7 @@ public class AddressBookServlet extends HttpServlet {
 			}
 			System.out.println(countMale);
 			System.out.println(countFemale);
-			out.println("<h2>Ilosc MALE to " + countMale + "</h2>");
-			out.println("<h2>Ilosc FEMALE to " + countFemale + "</h2>");
-		
+			
 
 		}
 		
