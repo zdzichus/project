@@ -35,9 +35,9 @@ public class AddressBookServlet extends HttpServlet {
 					request.getParameter("gender") };
 
 					book.addEntry(table_name, myStringArray);
-			 
+			        String string = book.readAllEntry();
 					String word = "Male";
-					String temp[] = book.readAllEntry().split(" ");
+					String temp[] = string.split(" ");
 					int count = 0;
 					for (int i = 0; i < temp.length; i++) {
 			        if (word.equals(temp[i])) 
