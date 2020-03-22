@@ -42,6 +42,7 @@ public class AddressBookServlet extends HttpServlet {
 			out.println("<title>Dzidek1</title></head>");
 			out.println("<body><h1>Database results:</h1>");
 			out.println("<p> Wsztskie wpisy " + (book.readAllEntry()) + ")</p>");
+			out.println("</body></html>");
 			out.close();
 		}
 
