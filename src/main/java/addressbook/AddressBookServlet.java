@@ -16,6 +16,7 @@ public class AddressBookServlet extends HttpServlet {
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html; charset=UTF-8");
+		PrintWriter out = response.getWriter();
 
 		String person_table = "PERSON";
 		String surname = request.getParameter("surname");
@@ -34,23 +35,10 @@ public class AddressBookServlet extends HttpServlet {
 					request.getParameter("gender") };
 
 			book.addEntry(person_table, myStringArray);
-
-		}
-
-	}
-
-	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		PrintWriter out = response.getWriter();
-		response.setContentType("text/html; charset=UTF-8");
-		try {
 			out.println("<p> Wsztskie wpisy " + (book.readAllEntry()) + ")</p>");
-
-		} finally {
-			out.close();
+			out.close();		
 		}
-		RequestDispatcher req = request.getRequestDispatcher("displayForm.jsp");
-		req.forward(request, response);
-		System.out.print(book.readEntry());
+
 	}
 
 }
