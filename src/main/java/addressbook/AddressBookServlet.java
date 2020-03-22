@@ -30,7 +30,7 @@ public class AddressBookServlet extends HttpServlet {
 			req.include(request, response);
 
 		} else {
-			String[] myStringArray = new String[] { request.getParameter("surname"), request.getParameter("firstName"),
+			String[] myStringArray = new String[] { request.getParameter("surname" + "surname:"), request.getParameter("firstName"),
 					request.getParameter("phone"), request.getParameter("city"), request.getParameter("country"),
 					request.getParameter("gender") };
 
