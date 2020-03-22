@@ -48,6 +48,8 @@ public class AddressBookMongo implements AddressBook {
 	}
 	
 
+     	 
+
 	public DBObject readEntry() {
 		DBCollection addressCollection = getAddressCollection();
 		return (DBObject) addressCollection.findOne();

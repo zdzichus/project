@@ -34,7 +34,16 @@ public class AddressBookServlet extends HttpServlet {
 					request.getParameter("phone"), request.getParameter("city"), request.getParameter("country"),
 					request.getParameter("gender") };
 
-			book.addEntry(table_name, myStringArray);
+					book.addEntry(table_name, myStringArray);
+			 
+					String word = "Male";
+					String temp[] = book.readAllEntry().split(" ");
+					int count = 0;
+					for (int i = 0; i < temp.length; i++) {
+			        if (word.equals(temp[i])) 
+			            count++;
+					}			      	
+			
 			out.println("<!DOCTYPE html>");
 			out.println("<html><head>");
 			out.println("<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>");
@@ -42,6 +51,7 @@ public class AddressBookServlet extends HttpServlet {
 			out.println("<title>Dzidek1</title></head>");
 			out.println("<body><h1>Database results:</h1>");
 			response.getWriter().println("<h2> there are now " + book.size() + "entries</h1><br>" );
+			out.println("<h2>Ilosc " + word + "to" + count + "</h2>" );
 			out.println("<p> Wsztskie wpisy " + (book.readAllEntry()) + ")</p>");
 			out.println("</body></html>");
 			out.close();
