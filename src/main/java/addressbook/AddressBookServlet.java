@@ -33,8 +33,9 @@ public class AddressBookServlet extends HttpServlet {
 			String[] myStringArray = new String[] { request.getParameter("surname" ), request.getParameter("firstName"),
 					request.getParameter("phone"), request.getParameter("city"), request.getParameter("country"),
 					request.getParameter("gender") };
-					book.addEntry(table_name, myStringArray);					
-				    String stringMale = book.readAllEntry();
+					book.addEntry(table_name, myStringArray);
+					book.readAllEntry();
+				    String stringMale = book.readAllEntry();				    
 			        String stringFemale = book.readAllEntry();
 					String wordMale = "\"Male\"]}{";
 					String wordFemale = "\"Female\"]}{";
@@ -63,8 +64,6 @@ public class AddressBookServlet extends HttpServlet {
 			out.println("<h2>Ilosc MALE to " + countMale + "</h2>" );
 			out.println("<h2>Ilosc FEMALE to " + countFemale + "</h2>" );	
 			out.println("<p> Wsztskie wpisy " + (book.readAllEntry()) + ")</p>");
-			response.getWriter().println("zobacz" + countMale );
-			response.getWriter().println("zobacz" + countFemale );
 			out.println("</body></html>");
 			out.close();
  
