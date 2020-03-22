@@ -35,39 +35,39 @@ public class AddressBookServlet extends HttpServlet {
 					request.getParameter("gender") };
 					book.addEntry(table_name, myStringArray);
 					
-			        String stringMale = book.readAllEntry();
-			        String stringFemale = book.readAllEntry();
-					String wordMale = "\"Male\"]}{";
-					String wordFemale = "\"Female\"]}{";
-					String tempMale[] = stringMale.split(" ");
-					String tempFemale[] = stringFemale.split(" ");
-					int countMale = 0 ;
-					int countFemale = 0;
-					
-					for (int i = 0; i < tempMale.length; i++) {
-			        if (wordMale.equals(tempMale[i])) 
-			            countMale++;
-					}			      	
-					
-					for (int i = 0; i < tempFemale.length; i++) {
-				        if (wordFemale.equals(tempFemale[i])) 
-				            countFemale++;
-						}
-			
-			out.println("<!DOCTYPE html>");
-			out.println("<html><head>");
-			out.println("<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>");
-			out.println("<link rel='stylesheet' type='text/css' href='style.css'>");
-			out.println("<title>Dzidek1</title></head>");
-			out.println("<body><h1>Database results:</h1>");
-			response.getWriter().println("<h2> there are now " + book.size() + "entries</h1><br>" );
-			out.println("<h2>Ilosc MALE to " + countMale + "</h2>" );
-			out.println("<h2>Ilosc FEMALE to " + countFemale + "</h2>" );	
-			out.println("<p> Wsztskie wpisy " + (book.readAllEntry()) + ")</p>");			
-			out.println("</body></html>");
-			out.close();
+			    
 		}
+	    String stringMale = book.readAllEntry();
+        String stringFemale = book.readAllEntry();
+		String wordMale = "\"Male\"]}{";
+		String wordFemale = "\"Female\"]}{";
+		String tempMale[] = stringMale.split(" ");
+		String tempFemale[] = stringFemale.split(" ");
+		int countMale = 0 ;
+		int countFemale = 0;
 		
+		for (int i = 0; i < tempMale.length; i++) {
+        if (wordMale.equals(tempMale[i])) 
+            countMale++;
+		}			      	
+		
+		for (int i = 0; i < tempFemale.length; i++) {
+	        if (wordFemale.equals(tempFemale[i])) 
+	            countFemale++;
+			}
+
+out.println("<!DOCTYPE html>");
+out.println("<html><head>");
+out.println("<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>");
+out.println("<link rel='stylesheet' type='text/css' href='style.css'>");
+out.println("<title>Dzidek1</title></head>");
+out.println("<body><h1>Database results:</h1>");
+response.getWriter().println("<h2> there are now " + book.size() + "entries</h1><br>" );
+out.println("<h2>Ilosc MALE to " + countMale + "</h2>" );
+out.println("<h2>Ilosc FEMALE to " + countFemale + "</h2>" );	
+out.println("<p> Wsztskie wpisy " + (book.readAllEntry()) + ")</p>");			
+out.println("</body></html>");
+out.close();
 
 	}
 
