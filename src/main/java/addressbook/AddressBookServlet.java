@@ -41,8 +41,8 @@ public class AddressBookServlet extends HttpServlet {
 					String wordFemale = "\"Female\"]}{";
 					String tempMale[] = stringMale.split(" ");
 					String tempFemale[] = stringFemale.split(" ");
-					int countMale = 0 ;
-					int countFemale = 0;
+					int countMale = 1 ;
+					int countFemale = 1;
 					
 					for (int i = 0; i < tempMale.length; i++) {
 			        if (wordMale.equals(tempMale[i])) 
