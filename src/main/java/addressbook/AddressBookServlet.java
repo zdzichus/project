@@ -35,14 +35,23 @@ public class AddressBookServlet extends HttpServlet {
 					request.getParameter("gender") };
 
 					book.addEntry(table_name, myStringArray);
+					
 			        String string = book.readAllEntry();
-					String word = "\"Male\"]}{";
+					String wordMale = "\"Male\"]}{";
+					String wordFemale = "\"Female\"]}{";
 					String temp[] = string.split(" ");
-					int count = 0;
+					int countMale = 0;
+					int countFemale = 0;
+					
 					for (int i = 0; i < temp.length; i++) {
-			        if (word.equals(temp[i])) 
-			            count++;
+			        if (wordMale.equals(temp[i])) 
+			            countMale++;
 					}			      	
+					
+					for (int i = 0; i < temp.length; i++) {
+				        if (wordFemale.equals(temp[i])) 
+				            countFemale++;
+						}
 			
 			out.println("<!DOCTYPE html>");
 			out.println("<html><head>");
@@ -51,7 +60,9 @@ public class AddressBookServlet extends HttpServlet {
 			out.println("<title>Dzidek1</title></head>");
 			out.println("<body><h1>Database results:</h1>");
 			response.getWriter().println("<h2> there are now " + book.size() + "entries</h1><br>" );
-			out.println("<h2>Ilosc " + word + "to" + count + "</h2>" );
+			out.println("<h2>Ilosc MALE to " + countMale + "</h2>" );
+			out.println("<h2>Ilosc FEMALE to " + countFemale + "</h2>" );
+			
 			out.println("<p> Wsztskie wpisy " + (book.readAllEntry()) + ")</p>");
 			out.println("</body></html>");
 			out.close();
