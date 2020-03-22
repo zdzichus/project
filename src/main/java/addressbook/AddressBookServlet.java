@@ -39,8 +39,6 @@ public class AddressBookServlet extends HttpServlet {
 			empty_form = true;
 
 		} else {
-			empty_form = false;
-			
 			
 			String[] myStringArray = new String[] { request.getParameter("surname"), request.getParameter("firstName"),
 					request.getParameter("phone"), request.getParameter("city"), request.getParameter("country"),
@@ -57,8 +55,8 @@ public class AddressBookServlet extends HttpServlet {
         	out.println("</body></html>");
 			out.close();
 			System.out.println("Dupa");
-		
-           
+			empty_form = false;
+			System.out.println(empty_form);            
 		}
 		
 		if (empty_form = false) {
