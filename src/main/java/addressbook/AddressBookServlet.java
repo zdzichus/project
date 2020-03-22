@@ -36,7 +36,7 @@ public class AddressBookServlet extends HttpServlet {
 
 					book.addEntry(table_name, myStringArray);
 			        String string = book.readAllEntry();
-					String word = "Male";
+					String word = "\"Male\"]}{";
 					String temp[] = string.split(" ");
 					int count = 0;
 					for (int i = 0; i < temp.length; i++) {
