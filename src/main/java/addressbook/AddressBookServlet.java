@@ -10,13 +10,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class AddressBookServlet extends HttpServlet {
-
+    
 	public static final long serialVersionUID = 1L;
 	AddressBook book = new AddressBookMongo();
+	
 
-	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html; charset=UTF-8");
-		PrintWriter out = response.getWriter();
+		
 
 		String person_table = "PERSON";
 		String surname = request.getParameter("surname");
@@ -35,16 +36,21 @@ public class AddressBookServlet extends HttpServlet {
 					request.getParameter("gender") };
 
 			book.addEntry(person_table, myStringArray);
-			out.println("<!DOCTYPE html>");
-	        out.println("<html><head>");
-	        out.println("<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>");
-	        out.println("<link rel='stylesheet' type='text/css' href='style.css'>");	   	        
-	        out.println("<title><h1>Database results</h1></title></head>");
-	        out.println("<body><h2>All Entries:</h2>");
-			out.println("<p> Wsztskie wpisy " + (book.readAllEntry()) + ")</p>");
-			out.close();		
+	
 		}
 
 	}
-
+	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setContentType("text/html; charset=UTF-8");
+		PrintWriter out = response.getWriter();
+		
+		out.println("<!DOCTYPE html>");
+	    out.println("<html><head>");
+	    out.println("<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>");
+	    out.println("<link rel='stylesheet' type='text/css' href='style.css'>");	   	        
+	    out.println("<title>Dzidek1</title></head>");
+	    out.println("<body><h1>Database results:</h1>");
+		out.println("<p> Wsztskie wpisy " + (book.readAllEntry()) + ")</p>");
+		out.close();	
+	}
 }

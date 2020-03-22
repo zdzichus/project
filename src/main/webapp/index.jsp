@@ -10,7 +10,7 @@
 <body>
 <h1>Simple Form</h1>
 			<h2>Entry details: </h2>
-				<form method ="post" action="addressBookServlet">
+				<form method ="get" action="addressBookServlet">
 				Name <input type="text" name="firstName"> <br>
 				Surname <input type="text" name="surname"> <br> 
 				Phone <input type="text" name="phone"> <br>
