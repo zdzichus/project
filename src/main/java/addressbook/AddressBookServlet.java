@@ -36,20 +36,22 @@ public class AddressBookServlet extends HttpServlet {
 
 					book.addEntry(table_name, myStringArray);
 					
-			        String string = book.readAllEntry();
+			        String stringMale = book.readAllEntry();
+			        String stringFemale = book.readAllEntry();
 					String wordMale = "\"Male\"]}{";
 					String wordFemale = "\"Female\"]}{";
-					String temp[] = string.split(" ");
+					String tempMale[] = stringMale.split(" ");
+					String tempFemale[] = stringFemale.split(" ");
 					int countMale = 0;
 					int countFemale = 0;
 					
-					for (int i = 0; i < temp.length; i++) {
-			        if (wordMale.equals(temp[i])) 
+					for (int i = 0; i < tempMale.length; i++) {
+			        if (wordMale.equals(tempMale[i])) 
 			            countMale++;
 					}			      	
 					
-					for (int i = 0; i < temp.length; i++) {
-				        if (wordFemale.equals(temp[i])) 
+					for (int i = 0; i < tempFemale.length; i++) {
+				        if (wordFemale.equals(tempFemale[i])) 
 				            countFemale++;
 						}
 			
