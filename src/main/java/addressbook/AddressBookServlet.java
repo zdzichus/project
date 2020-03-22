@@ -18,7 +18,7 @@ public class AddressBookServlet extends HttpServlet {
 		response.setContentType("text/html; charset=UTF-8");
 		PrintWriter out = response.getWriter();
 
-		String person_table = "PERSON";
+		String table_name = "PERSON";
 		String surname = request.getParameter("surname");
 		String phone = request.getParameter("phone");
 		String firstName = request.getParameter("firstName");
@@ -30,11 +30,11 @@ public class AddressBookServlet extends HttpServlet {
 			req.include(request, response);
 
 		} else {
-			String[] myStringArray = new String[] { request.getParameter("surname" + surname), request.getParameter("firstName"),
+			String[] myStringArray = new String[] { request.getParameter("surname" ), request.getParameter("firstName"),
 					request.getParameter("phone"), request.getParameter("city"), request.getParameter("country"),
 					request.getParameter("gender") };
 
-			book.addEntry(person_table, myStringArray);
+			book.addEntry(table_name, myStringArray);
 			out.println("<!DOCTYPE html>");
 			out.println("<html><head>");
 			out.println("<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>");

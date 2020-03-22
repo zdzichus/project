@@ -22,9 +22,9 @@ public class AddressBookMongo implements AddressBook {
 		// TODO Auto-generated constructor stub
 	}
 
-	public void addEntry(String person_table, String[] myStringArray) {
+	public void addEntry(String table_name, String[] myStringArray) {
 		DBCollection addressCollection = getAddressCollection();
-		addressCollection.insert(new BasicDBObject(person_table, myStringArray));
+		addressCollection.insert(new BasicDBObject(table_name, myStringArray));
 
 	}
 
