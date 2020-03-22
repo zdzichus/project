@@ -18,6 +18,12 @@ public class AddressBookServlet extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html; charset=UTF-8");
 		PrintWriter out = response.getWriter();
+		String stringMale = book.readAllEntry();
+		String stringFemale = book.readAllEntry();
+		String wordMale = "\"Male\"]}{";
+		String wordFemale = "\"Female\"]}{";
+		String tempMale[] = stringMale.split(" ");
+		String tempFemale[] = stringFemale.split(" ");
 
 		String table_name = "PERSON";
 		String surname = request.getParameter("surname");
@@ -34,6 +40,8 @@ public class AddressBookServlet extends HttpServlet {
 
 		} else {
 			empty_form = false;
+			
+			
 			String[] myStringArray = new String[] { request.getParameter("surname"), request.getParameter("firstName"),
 					request.getParameter("phone"), request.getParameter("city"), request.getParameter("country"),
 					request.getParameter("gender") };
@@ -48,16 +56,14 @@ public class AddressBookServlet extends HttpServlet {
             out.println("<p> Wsztskie wpisy " + (book.readAllEntry()) + ")</p>");
         	out.println("</body></html>");
 			out.close();
+			System.out.println("Dupa");
+		
            
 		}
+		
 		if (empty_form = false) {
-
-			String stringMale = book.readAllEntry();
-			String stringFemale = book.readAllEntry();
-			String wordMale = "\"Male\"]}{";
-			String wordFemale = "\"Female\"]}{";
-			String tempMale[] = stringMale.split(" ");
-			String tempFemale[] = stringFemale.split(" ");
+			System.out.println("Dupa1");
+	   
 			int countMale = 0;
 			int countFemale = 0;
 
