@@ -18,15 +18,7 @@ public class AddressBookServlet extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html; charset=UTF-8");
 		PrintWriter out = response.getWriter();
-		String stringMale = book.readAllEntry();
-		String stringFemale = book.readAllEntry();
-		String wordMale = "\"Male\"]}{";
-		String wordFemale = "\"Female\"]}{";
-		int countMale = 0 ;
-		int countFemale = 0 ;
-		String tempMale[] = stringMale.split(" ");
-		String tempFemale[] = stringFemale.split(" ");
-
+	
 		String table_name = "PERSON";
 		String surname = request.getParameter("surname");
 		String phone = request.getParameter("phone");
@@ -53,34 +45,32 @@ public class AddressBookServlet extends HttpServlet {
 			out.println("<link rel='stylesheet' type='text/css' href='style.css'>");
 			out.println("<title>Dzidek1</title></head>");
 			out.println("<body><h1>Database results:</h1>");
-			response.getWriter().println("<h2> there are now " + book.size() + "entries</h1><br>");
-            out.println("<p> Wsztskie wpisy " + (book.readAllEntry()) + ")</p>");
+			out.println("<h2> there are now " + book.size() + "entries</h1><br>");
+            out.println("<p> Wsztskie wpisy " + book.readAllEntry() + "<br>");
+            
         	out.println("</body></html>");
 			out.close();
 			
 		}
 		if (empty_form == false) {
-			System.out.println("Dupa1");
-			System.out.println(countMale);
-			System.out.println(countFemale);   			
-
-			for (int i = 0; i < tempMale.length; i++) {
-				if (wordMale.equals(tempMale[i]))
-					countMale = countMale+1;
-			}
-
-			for (int i = 0; i < tempFemale.length; i++) {
-				if (wordFemale.equals(tempFemale[i]))
-					countFemale++;
-			}
-			System.out.println(countMale);
-			System.out.println(countFemale);
 			
-
+				      String string = book.readAllEntry(); 
+				      String word = "\"Male\"]}{"; 
+				      String temp[] = string.split(" "); 
+				      int count = 0; 
+						
+				      for (int i = 0; i < temp.length; i++) { 
+				         if (word.equals(temp[i]))  
+				         count++; 
+				      } 
+				      System.out.println("The string is: " + string);
+				      System.out.println("The word " + word + " occurs " + count + " times in the above string"); 
+				   } 
 		}
+	
 		
-	}
+}
 
 	
 
-}
+
