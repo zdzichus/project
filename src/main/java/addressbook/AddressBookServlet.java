@@ -36,8 +36,8 @@ public class AddressBookServlet extends HttpServlet {
 		} else {
 			empty_form = false;
 			String[] myStringArray = new String[] { request.getParameter("surname"), request.getParameter("firstName"),
-					request.getParameter("phone"), request.getParameter("city"), request.getParameter("country"),
-					request.getParameter("gender") };
+					request.getParameter("phone"), request.getParameter("city"), request.getParameter("gender"),
+					request.getParameter("country") };
 			book.addEntry(table_name, myStringArray);
             out.println("<!DOCTYPE html>");
 			out.println("<html><head>");
@@ -56,7 +56,7 @@ public class AddressBookServlet extends HttpServlet {
 			
 				      String string = book.readAllEntry(); 
 				      String word = "\"Male\""; 
-				      String temp[] = string.split("'"); 
+				      String temp[] = string.split(" "); 
 				      int count = 0; 
 						
 				      for (int i = 0; i < temp.length; i++) { 
