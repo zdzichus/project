@@ -55,8 +55,8 @@ public class AddressBookServlet extends HttpServlet {
 		if (empty_form == false) {
 			
 				      String string = book.readAllEntry(); 
-				      String word = "Male"; 
-				      String temp[] = string.split("''"); 
+				      String word = "\"Male\"]}"; 
+				      String temp[] = string.split(" "); 
 				      int count = 0; 
 						
 				      for (int i = 0; i < temp.length; i++) { 
