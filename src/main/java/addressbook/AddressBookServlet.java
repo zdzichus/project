@@ -48,7 +48,7 @@ public class AddressBookServlet extends HttpServlet {
 			int countMale = 0;
 
 			String stringFemale = book.readAllEntry();
-			String wordFemale = "\"Male\"";
+			String wordFemale = "\"Female\"";
 			String tempFemale[] = stringFemale.split(" ");
 			int countFemale = 0;
 
