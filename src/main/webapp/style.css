@@ -1,7 +1,7 @@
 @charset "UTF-8";
 body{
   margin: 0;
-  background: linear-gradient(to bottom, red 50%, blue 0%);
+  background: linear-gradient(to bottom, white 50%, red 0%);
   
   height:100vh;
   text-align:center;
