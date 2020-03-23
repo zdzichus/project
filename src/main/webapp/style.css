@@ -1,11 +1,6 @@
 @charset "UTF-8";
 body{
-  margin: 0;
-  background: linear-gradient(to bottom, white 50%, red 0%);
-  
-  height:100vh;
-  text-align:center;
-  color:#000000;
+	background-color: #ffff80;
 }
 h1{
 	text-align: center;
@@ -42,9 +37,4 @@ div{
 input[type="radio"]:checked + label {
 	font-weight: bold;
 	font-size: 18px;
-}
-@media screen and (max-width: 992px) {
-  .body {
-    width: 50%;
-  }
 }
