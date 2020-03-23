@@ -1,6 +1,11 @@
 @charset "UTF-8";
 body{
-	background-color: #ffff80;
+  margin: 0;
+  background: linear-gradient(to bottom, red 50%, blue 0%);
+  
+  height:100vh;
+  text-align:center;
+  color:#fff;
 }
 h1{
 	text-align: center;
