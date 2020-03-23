@@ -18,7 +18,7 @@ public class AddressBookServlet extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html; charset=UTF-8");
 		PrintWriter out = response.getWriter();
-	
+
 		String table_name = "PERSON";
 		String surname = request.getParameter("surname");
 		String phone = request.getParameter("phone");
@@ -31,7 +31,6 @@ public class AddressBookServlet extends HttpServlet {
 			empty_form = true;
 			RequestDispatcher req = request.getRequestDispatcher("index.jsp");
 			req.include(request, response);
-			
 
 		} else {
 			empty_form = false;
@@ -39,38 +38,42 @@ public class AddressBookServlet extends HttpServlet {
 					request.getParameter("phone"), request.getParameter("city"), request.getParameter("gender"),
 					request.getParameter("country") };
 			book.addEntry(table_name, myStringArray);
-            out.println("<!DOCTYPE html>");
+
+		}
+		if (empty_form == false) {
+
+			String stringMale = book.readAllEntry();
+			String wordMale = "\"Male\"";
+			String tempMale[] = stringMale.split(" ");
+			int countMale = 0;
+
+			String stringFemale = book.readAllEntry();
+			String wordFemale = "\"Male\"";
+			String tempFemale[] = stringFemale.split(" ");
+			int countFemale = 0;
+
+			for (int i = 0; i < tempMale.length; i++) {
+				if (wordMale.equals(tempMale[i]))
+					countMale++;
+			}
+			for (int i = 0; i < tempFemale.length; i++) {
+				if (wordFemale.equals(tempFemale[i]))
+					countFemale++;
+			}
+
+			out.println("<!DOCTYPE html>");
 			out.println("<html><head>");
 			out.println("<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>");
 			out.println("<link rel='stylesheet' type='text/css' href='style.css'>");
 			out.println("<title>Dzidek1</title></head>");
 			out.println("<body><h1>Database results:</h1>");
 			out.println("<h2> there are now " + book.size() + "entries</h1><br>");
-            out.println("<p> Wsztskie wpisy " + book.readAllEntry() + "<br>");
-            
-        	out.println("</body></html>");
+			out.println("<h2> Male : " + countMale + "entries</h1><br>");
+			out.println("<h2> Female :  " + countFemale + "entries</h1><br>");
+			out.println("<p> Wsztskie wpisy " + book.readAllEntry() + "<br>");
+			out.println("</body></html>");
 			out.close();
-			
 		}
-		if (empty_form == false) {
-			
-				      String string = book.readAllEntry(); 
-				      String word = "\"Male\""; 
-				      String temp[] = string.split(" "); 
-				      int count = 0; 
-						
-				      for (int i = 0; i < temp.length; i++) { 
-				         if (word.equals(temp[i]))  
-				         count++; 
-				      } 
-				      System.out.println("The string is: " + string);
-				      System.out.println("The word " + word + " occurs " + count + " times in the above string"); 
-				   } 
-		}
-	
-		
+	}
+
 }
-
-	
-
-
