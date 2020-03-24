@@ -74,24 +74,16 @@ public class AddressBookServlet extends HttpServlet {
 				int countTable = 0;
 				for (int i = 0; i < tempTable.length; i++) {
 					if (wordTable.equals(tempTable[i]))
-						System.out.print("wartosc i przed count++"+i);
-						countTable++;
-						System.out.print("wartosc i p0 count++"+i);
-    				    out.println("<h2> All of word in  # "  +tempTable[i] +" #</h1> <br>");
-    				
-    					out.println("<table>"+
-    					"<tr><td>"+tempTable[5]+"</td> <td>"+tempTable[9]+"</td> <td>"+tempTable[11]+"</td> <td>"+tempTable[13]+"</td><td>"+tempTable[15]+"</td> <td>"+tempTable[17]+"</td> <td>"+tempTable[19]+"</td></tr>"+
-    					"</table>");
-				    
-				      System.out.print("wartosc i koniec petla"+i);
-					
-				}	
-				
-			   out.println("<table>"+
-			   "<tr><td>"+tempTable[5]+"</td> <td>"+tempTable[9]+"</td> <td>"+tempTable[11]+"</td> <td>"+tempTable[13]+"</td><td>"+tempTable[15]+"</td> <td>"+tempTable[17]+"</td> <td>"+tempTable[19]+"</td></tr>"+
-			   "<tr><td>"+tempTable[25]+"</td> <td>"+tempTable[29]+"</td> <td>"+tempTable[31]+"</td> <td>"+tempTable[33]+"</td><td>"+tempTable[35]+"</td> <td>"+tempTable[37]+"</td> <td>"+tempTable[39]+"</td></tr>"+
-			   "<tr><td>"+tempTable[45]+"</td> <td>"+tempTable[49]+"</td> <td>"+tempTable[51]+"</td> <td>"+tempTable[53]+"</td><td>"+tempTable[55]+"</td> <td>"+tempTable[57]+"</td> <td>"+tempTable[59]+"</td></tr>"+
-			   "</table>");
+						countTable++;		
+					}
+				    int z= 0; 
+					for (int j=0; j< book.size(); j++) {
+						
+						out.println("<table>"+
+						"<tr><td>"+tempTable[z+5]+"</td> <td>"+tempTable[z+9]+"</td> <td>"+tempTable[z+11]+"</td> <td>"+tempTable[z+13]+"</td><td>"+tempTable[z+15]+"</td> <td>"+tempTable[z+17]+"</td> <td>"+tempTable[z+19]+"</td></tr>"+
+			            "</table>");
+						z=z+20;
+			   }
 			
 			out.println("<p> Wsztskie wpisy " + book.readAllEntry() + "<br>");
 			out.println("</body></html>");
