@@ -80,7 +80,7 @@ public class AddressBookServlet extends HttpServlet {
     				    out.println("<h2> All of word in  # "  +tempTable[i] +" #</h1> <br>");
     				
     					out.println("<table>"+
-    					"<tr><td>"+tempTable[i+5]+"</td> <td>"+tempTable[i+9]+"</td> <td>"+tempTable[i+11]+"</td> <td>"+tempTable[i+13]+"</td><td>"+tempTable[i+15]+"</td> <td>"+tempTable[i+17]+"</td> <td>"+tempTable[i+19]+"</td></tr>"+
+    					"<tr><td>"+tempTable[5]+"</td> <td>"+tempTable[9]+"</td> <td>"+tempTable[11]+"</td> <td>"+tempTable[13]+"</td><td>"+tempTable[15]+"</td> <td>"+tempTable[17]+"</td> <td>"+tempTable[19]+"</td></tr>"+
     					"</table>");
 				    
 				      System.out.print("wartosc i koniec petla"+i);
