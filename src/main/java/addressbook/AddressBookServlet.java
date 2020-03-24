@@ -42,14 +42,14 @@ public class AddressBookServlet extends HttpServlet {
 		}
 		if (empty_form == false) {
 			
-			String stringMale = book.readAllEntry();
+			String string = book.readAllEntry();
 			String wordMale = "\"Male\"";
-			String tempMale[] = stringMale.split(" ");
+			String tempMale[] = string.split(" ");
 			int countMale = 0;
 
-			String stringFemale = book.readAllEntry();
+			//String stringFemale = book.readAllEntry();
 			String wordFemale = "\"Female\"";
-			String tempFemale[] = stringFemale.split(" ");
+			String tempFemale[] = string.split(" ");
 			int countFemale = 0;
 
 			for (int i = 0; i < tempMale.length; i++) {
@@ -60,16 +60,24 @@ public class AddressBookServlet extends HttpServlet {
 				if (wordFemale.equals(tempFemale[i]))
 					countFemale++;
 			}
-			
-
-			out.println("<!DOCTYPE html>");
-			out.println("<html><head>");
-			out.println("<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>");
-			out.println("<link rel='stylesheet' type='text/css' href='style.css'>");
-			out.println("<title>Dzidek1</title></head>");
-			out.println("<body><h1>Database results:</h1>");
-			out.println("<h2> There are now: " + book.size() + " entries.<br> Male: "+ countMale +" Females: " +countFemale +"</h1> <br>");
-			out.println("<table>"+
+				out.println("<!DOCTYPE html>");
+				out.println("<html><head>");
+				out.println("<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>");
+				out.println("<link rel='stylesheet' type='text/css' href='style.css'>");
+				out.println("<title>Dzidek1</title></head>");
+				out.println("<body><h1>Database results:</h1>");
+				out.println("<h2> There are now: " + book.size() + " entries.<br> Male: "+ countMale +" Females: " +countFemale +"</h1> <br>");
+				
+				//String stringTable = book.readAllEntry();
+				String wordTable = "\"\"";
+				String tempTable[] = string.split(" ");
+				
+				for (int i = 0; i < tempTable.length; i++) {
+					if (wordTable.equals(tempTable[i]))								
+				    out.println("<h2> All of word in '' : "  +tempTable[i] +"</h1> <br>");
+				}
+				
+			   out.println("<table>"+
 			   "<tr><td>1</td> <td>2</td> <td>3</td> <td>8</td></tr>"+
 			   "<tr><td>4</td> <td>5</td> <td>6</td> <td>8</td></tr>"+
 			   "<tr><td>7</td> <td>8</td> <td>9</td> <td>8</td></tr>"+
