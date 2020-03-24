@@ -38,3 +38,6 @@ input[type="radio"]:checked + label {
 	font-weight: bold;
 	font-size: 18px;
 }
+td {
+	border: 1px solid black;
+}
