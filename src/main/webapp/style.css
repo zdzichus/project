@@ -39,5 +39,6 @@ input[type="radio"]:checked + label {
 	font-size: 18px;
 }
 table,td,tr{
+	text-align: center;
 	border: 2px solid black;
 }
