@@ -69,8 +69,8 @@ public class AddressBookServlet extends HttpServlet {
 				out.println("<h2> There are now: " + book.size() + " entries.<br> Male: "+ countMale +" Females: " +countFemale +"</h1> <br>");
 				
 				//String stringTable = book.readAllEntry();
-				String wordTable = "";
-				String tempTable[] = string.split("\"\"");
+				String wordTable = "\"\"";
+				String tempTable[] = string.split("");
 				int countTable = 0;
 				for (int i = 0; i < tempTable.length; i++) {
 					if (wordTable.equals(tempTable[i]))
