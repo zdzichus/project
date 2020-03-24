@@ -12,7 +12,7 @@ h2{
 	font-size: 20px;
 	color: steelblue;
 }
-form {
+form{
 	margin: 20px auto;
 	width: 320px;
 	color: steelblue;
@@ -38,6 +38,6 @@ input[type="radio"]:checked + label {
 	font-weight: bold;
 	font-size: 18px;
 }
-td {
-	border: 1px solid black;
+td,tr{
+	border: 2px solid black;
 }
