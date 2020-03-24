@@ -69,7 +69,7 @@ public class AddressBookServlet extends HttpServlet {
 			out.println("<title>Dzidek1</title></head>");
 			out.println("<body><h1>Database results:</h1>");
 			out.println("<h2> There are now: " + book.size() + " entries.<br> Male: "+ countMale +" Females: " +countFemale +"</h1> <br>");
-			out.println(" <table>"+
+			out.println("<table>"+
 			   "<tr><td>1</td> <td>2</td> <td>3</td> <td>8</td></tr>"+
 			   "<tr><td>4</td> <td>5</td> <td>6</td> <td>8</td></tr>"+
 			   "<tr><td>7</td> <td>8</td> <td>9</td> <td>8</td></tr>"+
