@@ -79,9 +79,9 @@ public class AddressBookServlet extends HttpServlet {
 				}
 			   out.println("<h2> All of word sum '' : "  + countTable +"</h1> <br>");
 			   out.println("<table>"+
-			   "<tr><td>1</td> <td>2</td> <td>3</td> <td>8</td></tr>"+
-			   "<tr><td>4</td> <td>5</td> <td>6</td> <td>8</td></tr>"+
-			   "<tr><td>7</td> <td>8</td> <td>9</td> <td>8</td></tr>"+
+			   "<tr><td>"+tempTable[5]+"</td> <td>"+tempTable[9]+"</td> <td>"+tempTable[11]+"</td> <td>"+tempTable[13]+"</td><td>"+tempTable[15]+"</td> <td>"+tempTable[17]+"</td> <td>"+tempTable[19]+"</td></tr>"+
+			   "<tr><td>"+tempTable[25]+"</td> <td>"+tempTable[29]+"</td> <td>"+tempTable[31]+"</td> <td>"+tempTable[33]+"</td><td>"+tempTable[35]+"</td> <td>"+tempTable[37]+"</td> <td>"+tempTable[39]+"</td></tr>"+
+			   "<tr><td>"+tempTable[45]+"</td> <td>"+tempTable[49]+"</td> <td>"+tempTable[51]+"</td> <td>"+tempTable[53]+"</td><td>"+tempTable[55]+"</td> <td>"+tempTable[57]+"</td> <td>"+tempTable[59]+"</td></tr>"+
 			   "</table>");
 			
 			out.println("<p> Wsztskie wpisy " + book.readAllEntry() + "<br>");
