@@ -74,11 +74,10 @@ public class AddressBookServlet extends HttpServlet {
 				int countTable = 0;
 				for (int i = 0; i < tempTable.length; i++) {
 					if (wordTable.equals(tempTable[i]))
-			
-				
-				 out.println("<h2> All of word in  : "  +tempTable[i] +"</h1> <br>");
+	   				countTable++;
+    				out.println("<h2> All of word in  # "  +tempTable[i] +" #</h1> <br>");
 				}
-			 
+			   out.println("<h2> All of word sum '' : "  + countTable +"</h1> <br>");
 			   out.println("<table>"+
 			   "<tr><td>1</td> <td>2</td> <td>3</td> <td>8</td></tr>"+
 			   "<tr><td>4</td> <td>5</td> <td>6</td> <td>8</td></tr>"+
