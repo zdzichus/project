@@ -70,7 +70,7 @@ public class AddressBookServlet extends HttpServlet {
 				
 				//String stringTable = book.readAllEntry();
 				String wordTable = "\"\"";
-				String tempTable[] = string.split("");
+				String tempTable[] = string.split("'");
 				int countTable = 0;
 				for (int i = 0; i < tempTable.length; i++) {
 					if (wordTable.equals(tempTable[i]))
