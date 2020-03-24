@@ -83,9 +83,7 @@ public class AddressBookServlet extends HttpServlet {
 						"<tr><td>"+tempTable[z+5]+"</td> <td>"+tempTable[z+9]+"</td> <td>"+tempTable[z+11]+"</td> <td>"+tempTable[z+13]+"</td><td>"+tempTable[z+15]+"</td> <td>"+tempTable[z+17]+"</td> <td>"+tempTable[z+19]+"</td></tr>"+
 			            "</table>");
 						z=z+20;
-			   }
-			
-			out.println("<p> Wsztskie wpisy " + book.readAllEntry() + "<br>");
+			          }
 			out.println("</body></html>");
 			out.close();
 		}
