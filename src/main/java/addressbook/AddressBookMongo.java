@@ -45,11 +45,6 @@ public class AddressBookMongo implements AddressBook {
 
 	}
 
-	public DBObject readEntry() {
-		return (DBObject) addressCollection.findOne();
-
-	}
-
 	public int size() {
 		return (int) addressCollection.getCount();
 	}

@@ -8,8 +8,6 @@ public interface AddressBook {
 
 	int size();
 
-	DBObject readEntry();
-
 	String readAllEntry();
 
 }
