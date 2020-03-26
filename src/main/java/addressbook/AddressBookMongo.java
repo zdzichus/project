@@ -6,6 +6,7 @@ import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;
+import com.mongodb.DBObject;
 import com.mongodb.Mongo;
 import com.mongodb.MongoException;
 
@@ -18,9 +19,12 @@ public class AddressBookMongo implements AddressBook {
 	String dbPassword = "kwiatek33";
 	DBCollection addressCollection = getAddressCollection();
 
+	public AddressBookMongo() {
+		// TODO Auto-generated constructor stub
+	}
 
-	public void addEntry(String table_name, String string) {
-		addressCollection.insert(new BasicDBObject(table_name, string));
+	public void addEntry(String table_name, String[] myStringArray) {
+		addressCollection.insert(new BasicDBObject(table_name, myStringArray));
 
 	}
 
@@ -38,6 +42,11 @@ public class AddressBookMongo implements AddressBook {
 			cursor.close();
 		}
 		return items.toString();
+
+	}
+
+	public DBObject readEntry() {
+		return (DBObject) addressCollection.findOne();
 
 	}
 
@@ -60,12 +69,9 @@ public class AddressBookMongo implements AddressBook {
 		}
 	}
 
-	@Override
-	public void addEntry(String surname, String[] myStringArray) {
+	public void addEntry(String person_table, String string) {
 		// TODO Auto-generated method stub
-		
+
 	}
-
-
 
 }
