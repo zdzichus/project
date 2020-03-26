@@ -47,6 +47,7 @@ public class AddressBookServlet extends HttpServlet {
 			String tempMale[] = string.split(" ");
 			int countMale = 0;
 
+			//String stringFemale = book.readAllEntry();
 			String wordFemale = "\"Female\"";
 			String tempFemale[] = string.split(" ");
 			int countFemale = 0;
@@ -68,6 +69,7 @@ public class AddressBookServlet extends HttpServlet {
 				out.println("<h2> There are now: " + book.size() + " entries.<br> Male: "+ countMale +" Females: " +countFemale +"</h1> <br>");
 				out.println("<table>");
 				
+				//String stringTable = book.readAllEntry();
 				String wordTable = "\"\"";
 				String tempTable[] = string.split("\"");
 				int countTable = 0;
@@ -77,6 +79,7 @@ public class AddressBookServlet extends HttpServlet {
 					}
 				    int z= 0; 
 					for (int j=0; j< book.size(); j++) {
+						
 					out.println("<tr><td>"+tempTable[z+9]+"</td> <td>"+tempTable[z+11]+"</td> <td>"+tempTable[z+13]+"</td> <td>"+
 					tempTable[z+15]+"</td><td>"+tempTable[z+17]+"</td> <td>"+tempTable[z+19]+"</td> <td>"+tempTable[z+5]+"</td></tr>");
 			          
