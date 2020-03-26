@@ -17,13 +17,13 @@ public class AddressBookMongo implements AddressBook {
 	String dbName = "addressbook";
 	String dbUser = "zdzichudb";
 	String dbPassword = "kwiatek33";
-
+	DBCollection addressCollection = getAddressCollection();
 	public AddressBookMongo() {
 		// TODO Auto-generated constructor stub
 	}
 
 	public void addEntry(String table_name, String[] myStringArray) {
-		DBCollection addressCollection = getAddressCollection();
+		
 		addressCollection.insert(new BasicDBObject(table_name, myStringArray));
 
 	}
@@ -31,7 +31,7 @@ public class AddressBookMongo implements AddressBook {
 	public String readAllEntry() {
 		
 		StringBuilder items = new StringBuilder();
-		DBCollection addressCollection = getAddressCollection();
+	
 		DBCursor cursor = addressCollection.find();
 		try {
 			while (cursor.hasNext()) {
@@ -51,13 +51,11 @@ public class AddressBookMongo implements AddressBook {
      	 
 
 	public DBObject readEntry() {
-		DBCollection addressCollection = getAddressCollection();
 		return (DBObject) addressCollection.findOne();
 
 	}
 
 	public int size() {
-		DBCollection addressCollection = getAddressCollection();
 		return (int) addressCollection.getCount();
 	}
 

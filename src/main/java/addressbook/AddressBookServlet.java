@@ -37,7 +37,7 @@ public class AddressBookServlet extends HttpServlet {
 			String[] myStringArray = new String[] { request.getParameter("surname"), request.getParameter("firstName"),
 					request.getParameter("phone"), request.getParameter("city"), request.getParameter("gender"),
 					request.getParameter("country") };
-			book.addEntry(table_name, myStringArray);
+			 book.addEntry(table_name, myStringArray);
 
 		}
 		if (empty_form == false) {
