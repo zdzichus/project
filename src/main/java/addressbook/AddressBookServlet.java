@@ -25,7 +25,7 @@ public class AddressBookServlet extends HttpServlet {
 		String firstName = request.getParameter("firstName");
 		String city = request.getParameter("city");
 		String country = request.getParameter("country");
-		request.getParameter("gender");
+		String select = request.getParameter("gender");
 
 		if (surname.isEmpty() || phone.isEmpty() || firstName.isEmpty() || city.isEmpty() || country.isEmpty()) {
 			empty_form = true;
@@ -70,9 +70,10 @@ public class AddressBookServlet extends HttpServlet {
 				
 				String wordTable = "\"\"";
 				String tempTable[] = string.split("\"");
+				int countTable = 0;
 				for (int i = 0; i < tempTable.length; i++) {
-					if (wordTable.equals(tempTable[i])) {
-					}		
+					if (wordTable.equals(tempTable[i]))
+						countTable++;		
 					}
 				    int z= 0; 
 					for (int j=0; j< book.size(); j++) {
