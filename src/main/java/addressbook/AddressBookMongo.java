@@ -18,26 +18,24 @@ public class AddressBookMongo implements AddressBook {
 	String dbUser = "zdzichudb";
 	String dbPassword = "kwiatek33";
 	DBCollection addressCollection = getAddressCollection();
+
 	public AddressBookMongo() {
 		// TODO Auto-generated constructor stub
 	}
 
 	public void addEntry(String table_name, String[] myStringArray) {
-		
 		addressCollection.insert(new BasicDBObject(table_name, myStringArray));
 
 	}
 
 	public String readAllEntry() {
-		
+
 		StringBuilder items = new StringBuilder();
-	
 		DBCursor cursor = addressCollection.find();
 		try {
 			while (cursor.hasNext()) {
 				items.append(cursor.next().toString());
-				
-				
+
 			}
 		} finally {
 
@@ -46,9 +44,6 @@ public class AddressBookMongo implements AddressBook {
 		return items.toString();
 
 	}
-	
-
-     	 
 
 	public DBObject readEntry() {
 		return (DBObject) addressCollection.findOne();
