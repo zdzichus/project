@@ -9,7 +9,7 @@
 </head>
 <body>
 <h1>Login:</h1>
-			<h2>Entry details: </h2>
+			<h2>Login details: </h2>
 				<form method ="get" action="loginBookServlet">
 				Login <input type="text" name="login"> <br>
 				Password <input type="password" name="password" > <br> 
