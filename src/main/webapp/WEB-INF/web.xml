@@ -8,4 +8,24 @@
     <servlet-name>addressBookServlet</servlet-name>
     <url-pattern>/addressBookServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>LoggingBookServlet</display-name>
+    <servlet-name>LoggingBookServlet</servlet-name>
+    <servlet-class>addressbook.LoggingBookServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoggingBookServlet</servlet-name>
+    <url-pattern>/LoggingBookServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>LoginBookServlet</display-name>
+    <servlet-name>LoginBookServlet</servlet-name>
+    <servlet-class>addressbook.LoginBookServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginBookServlet</servlet-name>
+    <url-pattern>/LoginBookServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
