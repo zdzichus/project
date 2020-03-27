@@ -10,18 +10,7 @@
     <servlet-name>addressBookServlet</servlet-name>
     <url-pattern>/addressBookServlet</url-pattern>
   </servlet-mapping>
-  
-  <servlet>
-    <description></description>
-    <display-name>LoggingBookServlet</display-name>
-    <servlet-name>LoggingBookServlet</servlet-name>
-    <servlet-class>addressbook.LoggingBookServlet</servlet-class>
-  </servlet>
-  
-  <servlet-mapping>
-    <servlet-name>LoggingBookServlet</servlet-name>
-    <url-pattern>/LoggingBookServlet</url-pattern>
-  </servlet-mapping>
+ 
   
   <servlet>
     <description></description>
