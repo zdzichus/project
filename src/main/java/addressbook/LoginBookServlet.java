@@ -27,7 +27,7 @@ public class LoginBookServlet extends HttpServlet {
 		if (login.equals("admin") || password.equals("kwiatek33")) {
 			
 			RequestDispatcher req = request.getRequestDispatcher("form.jsp");
-			out.println("<h2> Wrong pass or login:</h1> <br>");
+			System.out.println("jestem zalogowany");
 			req.include(request, response);
 
 		} else {
@@ -39,9 +39,4 @@ public class LoginBookServlet extends HttpServlet {
 
 	}
 
-	 
-    public LoginBookServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
-}
+}	 
