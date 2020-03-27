@@ -21,7 +21,7 @@
   
   <servlet-mapping>
     <servlet-name>LoginBookServlet</servlet-name>
-    <url-pattern>/LoginBookServlet</url-pattern>
+    <url-pattern>/loginBookServlet</url-pattern>
   </servlet-mapping>
 
 </web-app>
