@@ -22,7 +22,7 @@ public class LoginBookServlet extends HttpServlet {
 		String password = request.getParameter("password");
 		
 		 login = request.getParameter("login");
-         password = request.getParameter("password");
+         password = request.getParameter("pass");
 		
 		if (login.equals("admin") || password.equals("kwiatek33")) {
 			
@@ -32,7 +32,7 @@ public class LoginBookServlet extends HttpServlet {
 
 		} else {
 			       
-			 RequestDispatcher req = request.getRequestDispatcher("login.jsp");
+			 RequestDispatcher req = request.getRequestDispatcher("index.jsp");
 			 req.include(request, response);
 		}
 		
