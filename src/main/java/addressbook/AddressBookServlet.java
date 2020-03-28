@@ -29,7 +29,7 @@ public class AddressBookServlet extends HttpServlet {
 
 		if (surname.isEmpty() || phone.isEmpty() || firstName.isEmpty() || city.isEmpty() || country.isEmpty()) {
 			empty_form = true;
-			RequestDispatcher req = request.getRequestDispatcher("index.jsp");
+			RequestDispatcher req = request.getRequestDispatcher("form.jsp");
 			req.include(request, response);
 
 		} else {
