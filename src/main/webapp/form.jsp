@@ -61,13 +61,21 @@
                      <input type="text" name="country" class="form-control" > <br>
                  </div>
   						
-				 <div>
-					<input type="radio" id="male" name="gender" value="Male"><label for="male">Male</label>
-					<input type="radio" id="female" name="gender" value="Female"><label for="female">Female</label>
-				</div>
+  							<div class="form-group">
+   						 <div class="custom-control custom-radio">
+      					 <input type="radio" id="male" name="gender" value="Male" class="custom-control-input" checked="">
+     					 <label class="custom-control-label" for="male">Male</label>
+    					</div>
+   						 <div class="custom-control custom-radio">
+     					 <input type="radio" id="female" name="gender" value="Female" class="custom-control-input">
+     					 <label class="custom-control-label" for="Female">Female</label>
+   						 </div>
+   							 </div>	
+  				
 				
 				<div>
-					<input type="submit" value="Submit">
+				    <button type="submit" class="btn btn-primary">Submit</button>
+					<!-- <input type="submit" value="Submit">  -->
 						
 				</div>
 		</form>
