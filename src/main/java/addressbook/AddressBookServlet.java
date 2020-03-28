@@ -91,8 +91,12 @@ public class AddressBookServlet extends HttpServlet {
 				out.println("<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>");
 				out.println("<link rel='stylesheet' type='text/css' href='bootstrap.css'>");
 				out.println("<title>Dzidek1</title></head>");
-				out.println("<body><h1>Database results:</h1>");
-				out.println("<h2> There are now: " + book.size() + " entries.<br> Male: "+ countMale +" Females: " +countFemale +"</h1> <br>");
+				out.println("<body><div class=\"jumbotron\">\r\n" + 
+						"<div class=\"card border-primary mb-3\" style=\"max-width: 30rem;\">\r\n" + 
+						"  <div class=\"card-header\">Database results:</div>\r\n" + 
+						"  <div class=\"card-body\">\r\n" + 
+						"    <h4 class=\"card-title\">Entry details:</h4>");
+				out.println("<h2> There are now: " + book.size() + " entries.<br> Male: "+ countMale +" Females: " +countFemale +"</h1></div> <br>");
 				out.println("<div class=\"jumbotron\">");	
 				out.println("<table class=\"table table-hover\">");
 				
