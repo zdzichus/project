@@ -95,7 +95,7 @@ public class AddressBookServlet extends HttpServlet {
 						"<div class=\"card border-primary mb-3\" style=\"max-width: 30rem;\">\r\n" + 
 						"  <div class=\"card-header\">Database results:</div>\r\n" + 
 						"  <div class=\"card-body\">\r\n" + 
-						"    <h4 class=\"card-title\">Entry details:</h4>");
+						"    <h4 class=\"card-title\">Statistics :</h4>");
 				out.println("<h2> There are now: " + book.size() + " entries.<br> Male: "+ countMale +" Females: " +countFemale +"</h1></div> </div><br>");
 				out.println("<div class=\"jumbotron\">");	
 				out.println("<table class=\"table table-hover\">");
