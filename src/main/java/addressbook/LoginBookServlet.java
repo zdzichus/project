@@ -20,11 +20,8 @@ public class LoginBookServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		String login = request.getParameter("login");
 		String pass = request.getParameter("pass");
-		
-		 login = request.getParameter("login");
-         pass = request.getParameter("pass");
-		
-		if (login.equals("admin") || pass.equals("kwiatek33")) {
+	
+		if (login.equals("admin") && pass.equals("kwiatek33")) {
 			
 			RequestDispatcher req = request.getRequestDispatcher("form.jsp");
 			System.out.println("jestem zalogowany");
