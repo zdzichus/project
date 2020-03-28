@@ -61,16 +61,19 @@
                      <input type="text" name="country" class="form-control" > <br>
                  </div>
   						
-  							<div class="form-group">
+  						<div class="form-group">
+   						
    						 <div class="custom-control custom-radio">
       					 <input type="radio" id="male" name="gender" value="Male" class="custom-control-input">
      					 <label class="custom-control-label" for="male">Male</label>
-    					</div>
+    					 </div>
+    					
    						 <div class="custom-control custom-radio">
      					 <input type="radio" id="female" name="gender" value="Female" class="custom-control-input">
-     					 <label class="custom-control-label" for="Female">Female</label>
+     					 <label class="custom-control-label" for="female">Female</label>
    						 </div>
-   							 </div>	
+   						
+   						 </div>	
   				
 				
 				<div>
