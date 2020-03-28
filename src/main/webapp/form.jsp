@@ -41,21 +41,21 @@
 			<h2>Entry details: </h2>
 				<form method ="get" action="addressBookServlet">
 				  
-				  <div class="form-group has-success">
+				  <div class="form-group">
 				    <label class="form-control-label" for="inputSuccess1">Name</label>
                     <input type="text" name="firstName" class="form-control is-valid"> <br>
 				
 				     <label class="form-control-label" for="inputSuccess1">Surname</label>
-                     <input type="text" name="Surname" class="form-control is-valid" > <br>
+                     <input type="text" name="surname" class="form-control is-valid" > <br>
                     
                       <label class="form-control-label" for="inputSuccess1">Phone</label>
-                     <input type="text" name="Phone" class="form-control is-valid" > <br>
+                     <input type="text" name="phone" class="form-control is-valid" > <br>
                      
                        <label class="form-control-label" for="inputSuccess1">City</label>
-                     <input type="text" name="City" class="form-control is-valid" > <br>
+                     <input type="text" name="city" class="form-control is-valid" > <br>
                      
                        <label class="form-control-label" for="inputSuccess1">Country</label>
-                     <input type="text" name="Country" class="form-control is-valid" > <br>
+                     <input type="text" name="country" class="form-control is-valid" > <br>
                      
 				<!--  
 				Name <input type="text" name="firstName"> <br>
