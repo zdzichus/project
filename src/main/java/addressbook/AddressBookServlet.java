@@ -97,7 +97,7 @@ public class AddressBookServlet extends HttpServlet {
 						"  <div class=\"card-body\">\r\n" + 
 						"    <h4 class=\"card-title\">Entry details:</h4>");
 				out.println("<h2> There are now: " + book.size() + " entries.<br> Male: "+ countMale +" Females: " +countFemale +"</h1></div> <br>");
-				out.println("<div class=\"jumbotron\">");	
+			
 				out.println("<table class=\"table table-hover\">");
 				
 				//String stringTable = book.readAllEntry();
@@ -117,7 +117,7 @@ public class AddressBookServlet extends HttpServlet {
 			          
 						z=z+20;
 			          }
-					out.println("</table></div>");
+					out.println("</table>");
 		   			out.println("</body></html>");
 			        out.close();
 		}
