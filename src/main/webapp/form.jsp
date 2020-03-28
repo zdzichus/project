@@ -4,8 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Dzidek</title>
+<title></title>
   <link rel="stylesheet" type="text/css" href="style.css">	
+  
 </head>
 <body>
 <h1>Simple Form</h1>

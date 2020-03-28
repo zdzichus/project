@@ -13,14 +13,12 @@
  
   
   <servlet>
-    <description></description>
-    <display-name>LoginBookServlet</display-name>
-    <servlet-name>LoginBookServlet</servlet-name>
+   <servlet-name>loginBookServlet</servlet-name>
     <servlet-class>addressbook.LoginBookServlet</servlet-class>
   </servlet>
   
   <servlet-mapping>
-    <servlet-name>LoginBookServlet</servlet-name>
+    <servlet-name>loginBookServlet</servlet-name>
     <url-pattern>/loginBookServlet</url-pattern>
   </servlet-mapping>
 
