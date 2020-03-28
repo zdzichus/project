@@ -24,7 +24,6 @@ public class LoginBookServlet extends HttpServlet {
 		if (login.equals("admin") && pass.equals("kwiatek33")) {
 			
 			RequestDispatcher req = request.getRequestDispatcher("form.jsp");
-			System.out.println("jestem zalogowany");
 			req.include(request, response);
 
 		} else {

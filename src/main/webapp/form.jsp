@@ -34,10 +34,10 @@
 <head>
 <meta charset="UTF-8">
 
-<title></title>
+<title>Main</title>
 </head>
 <body>
-
+<div class="jumbotron">
 <div class="card border-primary mb-3" style="max-width: 30rem;">
   <div class="card-header">Simple Form</div>
   <div class="card-body">
@@ -73,6 +73,6 @@
 		</form>
 		</div>	
   </div>	
-
+</div>
 </body>
 </html>
