@@ -67,6 +67,7 @@ public class AddressBookServlet extends HttpServlet {
 				out.println("<title>Dzidek1</title></head>");
 				out.println("<body><h1>Database results:</h1>");
 				out.println("<h2> There are now: " + book.size() + " entries.<br> Male: "+ countMale +" Females: " +countFemale +"</h1> <br>");
+				out.println("<div class=\"jumbotron\">");	
 				out.println("<table class=\"table table-hover\">");
 				
 				//String stringTable = book.readAllEntry();
@@ -79,13 +80,14 @@ public class AddressBookServlet extends HttpServlet {
 					}
 				    int z= 0; 
 					for (int j=0; j< book.size(); j++) {
+					
 						
 					out.println("<tr class=\"table-light\"><td>"+tempTable[z+9]+"</td> <td>"+tempTable[z+11]+"</td> <td>"+tempTable[z+13]+"</td> <td>"+
 					tempTable[z+15]+"</td><td>"+tempTable[z+17]+"</td> <td>"+tempTable[z+19]+"</td> <td>"+tempTable[z+5]+"</td></tr>");
 			          
 						z=z+20;
 			          }
-					out.println("</table>");
+					out.println("</table></div>");
 		   			out.println("</body></html>");
 			        out.close();
 		}

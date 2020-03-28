@@ -63,7 +63,7 @@
   						
   							<div class="form-group">
    						 <div class="custom-control custom-radio">
-      					 <input type="radio" id="male" name="gender" value="Male" class="custom-control-input" checked="">
+      					 <input type="radio" id="male" name="gender" value="Male" class="custom-control-input">
      					 <label class="custom-control-label" for="male">Male</label>
     					</div>
    						 <div class="custom-control custom-radio">
