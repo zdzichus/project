@@ -18,7 +18,7 @@ form{
 	color: steelblue;
 	padding: 5px;
 }
-input,password{
+input{
 	padding:5px;
 	font-size: inherit;
 }
@@ -28,14 +28,6 @@ input[type="text"] {
 	width: 100%;
 	border: 2px solid steelblue;
 }
-input[type="password"] {
-	display: block;
-	margin-bottom:1px;
-	width: 100%;
-	border: 2px solid steelblue;
-}
-
-
 input[type="radio"] {
 	margin:0px 8px 25px 18px;
 }
