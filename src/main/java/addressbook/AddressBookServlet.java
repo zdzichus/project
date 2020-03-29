@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 public class AddressBookServlet extends HttpServlet {
 
 	public static final long serialVersionUID = 1L;
-    AddressBook book = new AddressBookMongo();
+	AddressBook book = new AddressBookMongo();
 	boolean empty_form;
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
