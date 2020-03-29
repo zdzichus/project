@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Dzidek</title>
+<title>Dupek</title>
   <link rel="stylesheet" type="text/css" href="style.css">	
 </head>
 <body>
