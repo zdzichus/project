@@ -110,7 +110,6 @@ public class AddressBookServlet extends HttpServlet {
 					}
 				    int z= 0; 
 					for (int j=0; j< book.size(); j++) {
-					
 						
 					out.println("<tr class=\"table-light\"><td>"+tempTable[z+9]+"</td> <td>"+tempTable[z+11]+"</td> <td>"+tempTable[z+13]+"</td> <td>"+
 					tempTable[z+15]+"</td><td>"+tempTable[z+17]+"</td> <td>"+tempTable[z+19]+"</td> <td>"+tempTable[z+5]+"</td></tr>");
