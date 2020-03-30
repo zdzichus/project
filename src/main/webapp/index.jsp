@@ -24,10 +24,9 @@
 <title>Application</title>
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+	 <div class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
 		<div class="container">
-			<a href="../" class="navbar-brand">Bootswatch</a> <a
-				class="navbar-brand" href="#">Application</a>
+			<a class="navbar-brand" href="../">Application</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse"
 				data-target="#navbarColor01" aria-controls="navbarColor01"
 				aria-expanded="false" aria-label="Toggle navigation">
@@ -51,14 +50,14 @@
 					<button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
 				</form>
 			</div>
+			
 		</div>
-	</nav>
+	</div>
 	<div class="container">
 
-
 		<div class="row">
-			<div class="col-lg-5">
-				<div class="card border-info mb-3" ><br>
+			<div class="col-lg-5"><br><br><br><br>
+				<div class="card border-info mb-3" >
 					<div class="card-header">Simple Form</div>
 					<div class="card-body">
 					<h4 class="card-title">Entry Details:</h4>
@@ -100,6 +99,7 @@
 			</div>
 			</div>
 		</div>
+
 	</div>
 </body>
 </html>
