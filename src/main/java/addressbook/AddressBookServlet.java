@@ -109,7 +109,10 @@ public class AddressBookServlet extends HttpServlet {
 						"			\r\n" + 
 						"		</div>\r\n" + 
 						"	</div>");
-				out.println("<div class=\"jumbotron\"> <h2> There are now: " + book.size() + " entries.<br> Male: "+ countMale +" Females: " +countFemale +"</h1> <br>");
+				out.println("<div class=\"container\">\r\n" + 
+						"\r\n" + 
+						"		<div class=\"row\">\r\n" + 
+						"			<div class=\"col-lg-5\"><br><br><br><br><h2> There are now: " + book.size() + " entries.<br> Male: "+ countMale +" Females: " +countFemale +"</h1> <br>");
 				out.println(
 						"  <table class=\"table table-hover\">\r\n" + 
 						"  <thead>\r\n" + 
@@ -147,7 +150,7 @@ public class AddressBookServlet extends HttpServlet {
 		   					"    </tr>\r\n"); 			          
 						z=z+20;
 			          }
-					out.println("</tbody>\r\n" + "</table></div></div></div></div>");
+					out.println("</tbody>\r\n" + "</table></div></div></div></div></div></div>");
 		   			out.println("</body></html>");
 			        out.close();
 		}
