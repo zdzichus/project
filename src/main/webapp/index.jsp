@@ -55,14 +55,14 @@
 	</div>
 </nav>
 	<div class="container">   
-	 <div class="bs-docs-section">
-	       <div class="page-header">
+	
+	      
             <div class="row">
              <div class="col-lg-12">
               <h1 id="Forms">Simple Form - Entry Details: </h1>
+              <h1 id="Forms">Simple Form - Entry Details: </h1>
             </div>
-          </div>
-        </div>
+           </div>
 		
 	   <div class="row">
           <div class="col-lg-7">
@@ -99,6 +99,7 @@
 		</form>
 	</div>
 	</div>
+	
 	
 	</div>
 </body>
