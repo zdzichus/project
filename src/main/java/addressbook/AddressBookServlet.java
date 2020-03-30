@@ -109,15 +109,8 @@ public class AddressBookServlet extends HttpServlet {
 						"			\r\n" + 
 						"		</div>\r\n" + 
 						"	</div>");
-				//out.println("<h2> There are now: " + book.size() + " entries.<br> Male: "+ countMale +" Females: " +countFemale +"</h1> <br>");
-				out.println("<div class=\"container\">\r\n" + 
-						"\r\n" + 
-						"		<div class=\"row\">\r\n" + 
-					
-						
-						"					<div class=\"card-header\">Databeses entries : " + book.size() + "<br> Males : "+countMale+"<br> Females :" +countFemale +" </div>\r\n" + 
-						"					<div class=\"card-body\">\r\n" + 
-					
+				out.println("<h2> There are now: " + book.size() + " entries.<br> Male: "+ countMale +" Females: " +countFemale +"</h1> <br>");
+				out.println(
 						"  <table class=\"table table-hover\">\r\n" + 
 						"  <thead>\r\n" + 
 						"    <tr>\r\n" + 
@@ -143,7 +136,7 @@ public class AddressBookServlet extends HttpServlet {
 				    int z= 0; 
 					for (int j=0; j< book.size(); j++) {
 						
-					out.println("    <tr class=\"table-active\">\r\n" + 
+					out.println("    <tr class=\"table-light\">\r\n" + 
 		   					"      <td>"+tempTable[z+9]+"</td>\r\n" + 
 		   					"      <td>"+tempTable[z+11]+"</td>\r\n" + 
 		   					"      <td>"+tempTable[z+13]+"</td>\r\n" + 
