@@ -58,11 +58,13 @@
 
 		<div class="row">
 			<div class="col-lg-5">
-				<div class="card border-info mb-3" >
+				<div class="card border-info mb-3" ><br>
 					<div class="card-header">Simple Form</div>
+					<div class="card-body">
 					<h4 class="card-title">Entry Details:</h4>
-
-					<form method="get" action="addressBookServlet">
+  
+				 	 <form method="get" action="addressBookServlet">
+						
 						<div class="form-group">
 							<label class="col-form-label" for="inputDefault">Name</label> <input
 								type="text" name="firstName" class="form-control"><br>
@@ -92,10 +94,11 @@
 							<button type="submit" class="btn btn-primary">Submit</button>
 
 						</div>
+					
 					</form>
 				</div>
 			</div>
-
+			</div>
 		</div>
 	</div>
 </body>
