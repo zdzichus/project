@@ -58,14 +58,14 @@
 	
 	      
             <div class="row">
-             <div class="col-lg-12">
-              <h1 id="Forms">Simple Form - Entry Details: </h1>
+             <div class="col-lg-5">
+              <h1 id="Forms"></h1>
               <h1 id="Forms">Simple Form - Entry Details: </h1>
             </div>
            </div>
 		
 	   <div class="row">
-          <div class="col-lg-7">
+          <div class="col-lg-5">
 		<form method="get" action="addressBookServlet">
 			<div class="form-group">
 				<label class="col-form-label" for="inputDefault">Name</label> <input
