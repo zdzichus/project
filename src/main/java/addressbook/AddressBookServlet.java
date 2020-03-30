@@ -109,17 +109,17 @@ public class AddressBookServlet extends HttpServlet {
 						"			\r\n" + 
 						"		</div>\r\n" + 
 						"	</div>");
-				out.println("<h2> There are now: " + book.size() + " entries.<br> Male: "+ countMale +" Females: " +countFemale +"</h1> <br>");
+				out.println("<div class=\"jumbotron\"> <h2> There are now: " + book.size() + " entries.<br> Male: "+ countMale +" Females: " +countFemale +"</h1> <br>");
 				out.println(
 						"  <table class=\"table table-hover\">\r\n" + 
 						"  <thead>\r\n" + 
 						"    <tr>\r\n" + 
-						"      <th scope=\"col\">Name</th>\r\n" + 
 						"      <th scope=\"col\">Surname</th>\r\n" + 
+						"      <th scope=\"col\">Name</th>\r\n" + 
 						"      <th scope=\"col\">Phone</th>\r\n" + 
 						"      <th scope=\"col\">City</th>\r\n" + 
-						"      <th scope=\"col\">Gender</th>\r\n" + 
 						"      <th scope=\"col\">Country</th>\r\n" + 
+						"      <th scope=\"col\">Gender</th>\r\n" + 
 						"      <th scope=\"col\">ID</th>\r\n" + 
 						"    </tr>\r\n" + 
 						"  </thead>\r\n" + 
@@ -136,18 +136,18 @@ public class AddressBookServlet extends HttpServlet {
 				    int z= 0; 
 					for (int j=0; j< book.size(); j++) {
 						
-					out.println("    <tr class=\"table-light\">\r\n" + 
+					out.println("    <tr class=\"table-info\">\r\n" + 
 		   					"      <td>"+tempTable[z+9]+"</td>\r\n" + 
 		   					"      <td>"+tempTable[z+11]+"</td>\r\n" + 
 		   					"      <td>"+tempTable[z+13]+"</td>\r\n" + 
 		   					"      <td>"+tempTable[z+15]+"</td>\r\n" + 
-		   					"      <td>"+tempTable[z+17]+"</td>\r\n" + 
 		   					"      <td>"+tempTable[z+19]+"</td>\r\n" + 
+		   					"      <td>"+tempTable[z+17]+"</td>\r\n" + 
 		   					"      <td>"+tempTable[z+5]+"</td>\r\n" + 
 		   					"    </tr>\r\n"); 			          
 						z=z+20;
 			          }
-					out.println("</tbody>\r\n" + "</table></div></div></div>");
+					out.println("</tbody>\r\n" + "</table></div></div></div></div>");
 		   			out.println("</body></html>");
 			        out.close();
 		}
