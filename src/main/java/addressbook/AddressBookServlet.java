@@ -115,9 +115,9 @@ public class AddressBookServlet extends HttpServlet {
 						"		<div class=\"row\">\r\n" + 
 						"			<div class=\"col-lg-9\"><br><br><br><br>\r\n" + 
 						"				<div class=\"card border-info mb-3\" >\r\n" + 
-						"					<div class=\"card-header\">Databeses entries : " + book.size() + " </div>\r\n" + 
+						"					<div class=\"card-header\">Databeses entries : " + book.size() + " Males : "+countMale+" Females :" +countFemale +" </div>\r\n" + 
 						"					<div class=\"card-body\">\r\n" + 
-						"					<h4 class=\"card-title\">Males : "+countMale+"<br>Females : " +countFemale +" </h4><table class=\"table table-hover\"> <tbody>");
+						"					<table class=\"table table-hover\"> <tbody>");
 				
 				//String stringTable = book.readAllEntry();
 				String wordTable = "\"\"";
