@@ -54,9 +54,10 @@
 			</div>
 	</div>
 </nav>
-	<div class="container">      	
-		<h1>Simple Form</h1>
-		<h2>Entry details:</h2>
+	<div class="container">   
+	   	
+		
+		<h2> Simple Form - Entry details:</h2>
 		<form method="get" action="addressBookServlet">
 			<div class="form-group">
 				<label class="col-form-label" for="inputDefault">Name</label> <input
@@ -74,12 +75,12 @@
 				<div class="custom-control custom-radio">
 					<input type="radio" id="male" name="gender" value="Male"
 						class="custom-control-input"> <label
-						class="custom-control-label" for="customRadio1">Male</label>
+						class="custom-control-label" for="male">Male</label>
 				</div>
 				<div class="custom-control custom-radio">
 					<input type="radio" id="female" name="gender" value="Female"
 						class="custom-control-input"> <label
-						class="custom-control-label" for="customRadio1">Female</label>
+						class="custom-control-label" for="female">Female</label>
 				</div>
 			</div>
 
