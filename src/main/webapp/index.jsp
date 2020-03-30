@@ -58,7 +58,7 @@
 
 		<div class="row">
 			<div class="col-lg-5">
-				<div class="card border-info mb-3" style="max-width: 20rem;">
+				<div class="card border-info mb-3" >
 					<div class="card-header">Simple Form</div>
 					<h4 class="card-title">Entry Details:</h4>
 
