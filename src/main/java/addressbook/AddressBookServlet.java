@@ -61,13 +61,56 @@ public class AddressBookServlet extends HttpServlet {
 					countFemale++;
 			}
 				out.println("<!DOCTYPE html>");
-				out.println("<html><head>");
-				out.println("<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>");
-				out.println("<link rel='stylesheet' type='text/css' href='style.css'>");
-				out.println("<title>Dzidek1</title></head>");
-				out.println("<body><h1>Database results:</h1>");
+				out.println("<html><head><meta charset=\"UTF-8\">\r\n" + 
+						"<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\r\n" + 
+						"<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" />\r\n" + 
+						"<link rel=\"stylesheet\"\r\n" + 
+						"	href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\"\r\n" + 
+						"	integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\"\r\n" + 
+						"	crossorigin=\"anonymous\">\r\n" + 
+						"<script src=\"https://code.jquery.com/jquery-3.4.1.slim.min.js\"\r\n" + 
+						"	integrity=\"sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n\"\r\n" + 
+						"	crossorigin=\"anonymous\"></script>\r\n" + 
+						"<script\r\n" + 
+						"	src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js\"\r\n" + 
+						"	integrity=\"sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo\"\r\n" + 
+						"	crossorigin=\"anonymous\"></script>\r\n" + 
+						"<script\r\n" + 
+						"	src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js\"\r\n" + 
+						"	integrity=\"sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6\"\r\n" + 
+						"	crossorigin=\"anonymous\"></script>\r\n" + 
+						"<title>Application results </title></head>");
+				out.println("<body><div class=\"navbar navbar-expand-lg fixed-top navbar-dark bg-primary\">\r\n" + 
+						"		<div class=\"container\">\r\n" + 
+						"			<a class=\"navbar-brand\" href=\"../\">Application</a>\r\n" + 
+						"			<button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\"\r\n" + 
+						"				data-target=\"#navbarColor01\" aria-controls=\"navbarColor01\"\r\n" + 
+						"				aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n" + 
+						"				<span class=\"navbar-toggler-icon\"></span>\r\n" + 
+						"			</button>\r\n" + 
+						"\r\n" + 
+						"			<div class=\"collapse navbar-collapse\" id=\"navbarColor01\">\r\n" + 
+						"				<ul class=\"navbar-nav mr-auto\">\r\n" + 
+						"					<li class=\"nav-item active\"><a class=\"nav-link\" href=\"#\">Home\r\n" + 
+						"							<span class=\"sr-only\">(current)</span>\r\n" + 
+						"					</a></li>\r\n" + 
+						"					<li class=\"nav-item\"><a class=\"nav-link\" href=\"#\">Features</a>\r\n" + 
+						"					</li>\r\n" + 
+						"					<li class=\"nav-item\"><a class=\"nav-link\" href=\"#\">Pricing</a>\r\n" + 
+						"					</li>\r\n" + 
+						"					<li class=\"nav-item\"><a class=\"nav-link\" href=\"#\">About</a></li>\r\n" + 
+						"				</ul>\r\n" + 
+						"				<form class=\"form-inline my-2 my-lg-0\">\r\n" + 
+						"					<input class=\"form-control mr-sm-2\" type=\"text\"\r\n" + 
+						"						placeholder=\"Search\">\r\n" + 
+						"					<button class=\"btn btn-secondary my-2 my-sm-0\" type=\"submit\">Search</button>\r\n" + 
+						"				</form>\r\n" + 
+						"			</div>\r\n" + 
+						"			\r\n" + 
+						"		</div>\r\n" + 
+						"	</div>");
 				out.println("<h2> There are now: " + book.size() + " entries.<br> Male: "+ countMale +" Females: " +countFemale +"</h1> <br>");
-				out.println("<table>");
+				out.println("<table class=\"table table-hover\"> <tbody>");
 				
 				//String stringTable = book.readAllEntry();
 				String wordTable = "\"\"";
@@ -80,12 +123,12 @@ public class AddressBookServlet extends HttpServlet {
 				    int z= 0; 
 					for (int j=0; j< book.size(); j++) {
 						
-					out.println("<tr><td>"+tempTable[z+9]+"</td> <td>"+tempTable[z+11]+"</td> <td>"+tempTable[z+13]+"</td> <td>"+
+					out.println("<tr class=\"table-info\"><td>"+tempTable[z+9]+"</td> <td>"+tempTable[z+11]+"</td> <td>"+tempTable[z+13]+"</td> <td>"+
 					tempTable[z+15]+"</td><td>"+tempTable[z+17]+"</td> <td>"+tempTable[z+19]+"</td> <td>"+tempTable[z+5]+"</td></tr>");
 			          
 						z=z+20;
 			          }
-					out.println("</table>");
+					out.println("<tbody></table>");
 		   			out.println("</body></html>");
 			        out.close();
 		}
