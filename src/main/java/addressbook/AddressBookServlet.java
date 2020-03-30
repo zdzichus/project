@@ -113,7 +113,7 @@ public class AddressBookServlet extends HttpServlet {
 				out.println("<div class=\"container\">\r\n" + 
 						"\r\n" + 
 						"		<div class=\"row\">\r\n" + 
-						"			<div class=\"col-lg-7\"><br><br><br><br>\r\n" + 
+						"			<div class=\"col-lg-9\"><br><br><br><br>\r\n" + 
 						"				<div class=\"card border-info mb-3\" >\r\n" + 
 						"					<div class=\"card-header\">Databeses entries : " + book.size() + " </div>\r\n" + 
 						"					<div class=\"card-body\">\r\n" + 
