@@ -137,7 +137,78 @@ public class AddressBookServlet extends HttpServlet {
 						z=z+20;
 			          }
 					out.println("</tbody></table></div></div></div></div></div></div>");
-		   			out.println("</body></html>");
+		   			out.println("<table class=\"table table-hover\">\r\n" + 
+		   					"  <thead>\r\n" + 
+		   					"    <tr>\r\n" + 
+		   					"      <th scope=\"col\">Type</th>\r\n" + 
+		   					"      <th scope=\"col\">Column heading</th>\r\n" + 
+		   					"      <th scope=\"col\">Column heading</th>\r\n" + 
+		   					"      <th scope=\"col\">Column heading</th>\r\n" + 
+		   					"    </tr>\r\n" + 
+		   					"  </thead>\r\n" + 
+		   					"  <tbody>\r\n" + 
+		   					"    <tr class=\"table-active\">\r\n" + 
+		   					"      <th scope=\"row\">Active</th>\r\n" + 
+		   					"      <td>Column content</td>\r\n" + 
+		   					"      <td>Column content</td>\r\n" + 
+		   					"      <td>Column content</td>\r\n" + 
+		   					"    </tr>\r\n" + 
+		   					"    <tr>\r\n" + 
+		   					"      <th scope=\"row\">Default</th>\r\n" + 
+		   					"      <td>Column content</td>\r\n" + 
+		   					"      <td>Column content</td>\r\n" + 
+		   					"      <td>Column content</td>\r\n" + 
+		   					"    </tr>\r\n" + 
+		   					"    <tr class=\"table-primary\">\r\n" + 
+		   					"      <th scope=\"row\">Primary</th>\r\n" + 
+		   					"      <td>Column content</td>\r\n" + 
+		   					"      <td>Column content</td>\r\n" + 
+		   					"      <td>Column content</td>\r\n" + 
+		   					"    </tr>\r\n" + 
+		   					"    <tr class=\"table-secondary\">\r\n" + 
+		   					"      <th scope=\"row\">Secondary</th>\r\n" + 
+		   					"      <td>Column content</td>\r\n" + 
+		   					"      <td>Column content</td>\r\n" + 
+		   					"      <td>Column content</td>\r\n" + 
+		   					"    </tr>\r\n" + 
+		   					"    <tr class=\"table-success\">\r\n" + 
+		   					"      <th scope=\"row\">Success</th>\r\n" + 
+		   					"      <td>Column content</td>\r\n" + 
+		   					"      <td>Column content</td>\r\n" + 
+		   					"      <td>Column content</td>\r\n" + 
+		   					"    </tr>\r\n" + 
+		   					"    <tr class=\"table-danger\">\r\n" + 
+		   					"      <th scope=\"row\">Danger</th>\r\n" + 
+		   					"      <td>Column content</td>\r\n" + 
+		   					"      <td>Column content</td>\r\n" + 
+		   					"      <td>Column content</td>\r\n" + 
+		   					"    </tr>\r\n" + 
+		   					"    <tr class=\"table-warning\">\r\n" + 
+		   					"      <th scope=\"row\">Warning</th>\r\n" + 
+		   					"      <td>Column content</td>\r\n" + 
+		   					"      <td>Column content</td>\r\n" + 
+		   					"      <td>Column content</td>\r\n" + 
+		   					"    </tr>\r\n" + 
+		   					"    <tr class=\"table-info\">\r\n" + 
+		   					"      <th scope=\"row\">Info</th>\r\n" + 
+		   					"      <td>Column content</td>\r\n" + 
+		   					"      <td>Column content</td>\r\n" + 
+		   					"      <td>Column content</td>\r\n" + 
+		   					"    </tr>\r\n" + 
+		   					"    <tr class=\"table-light\">\r\n" + 
+		   					"      <th scope=\"row\">Light</th>\r\n" + 
+		   					"      <td>Column content</td>\r\n" + 
+		   					"      <td>Column content</td>\r\n" + 
+		   					"      <td>Column content</td>\r\n" + 
+		   					"    </tr>\r\n" + 
+		   					"    <tr class=\"table-dark\">\r\n" + 
+		   					"      <th scope=\"row\">Dark</th>\r\n" + 
+		   					"      <td>Column content</td>\r\n" + 
+		   					"      <td>Column content</td>\r\n" + 
+		   					"      <td>Column content</td>\r\n" + 
+		   					"    </tr>\r\n" + 
+		   					"  </tbody>\r\n" + 
+		   					"</table> </body></html>");
 			        out.close();
 		}
 	}
