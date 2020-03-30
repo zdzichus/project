@@ -109,8 +109,15 @@ public class AddressBookServlet extends HttpServlet {
 						"			\r\n" + 
 						"		</div>\r\n" + 
 						"	</div>");
-				out.println("<h2> There are now: " + book.size() + " entries.<br> Male: "+ countMale +" Females: " +countFemale +"</h1> <br>");
-				out.println("<table class=\"table table-hover\"> <tbody>");
+				//out.println("<h2> There are now: " + book.size() + " entries.<br> Male: "+ countMale +" Females: " +countFemale +"</h1> <br>");
+				out.println("<div class=\"container\">\r\n" + 
+						"\r\n" + 
+						"		<div class=\"row\">\r\n" + 
+						"			<div class=\"col-lg-7\"><br><br><br><br>\r\n" + 
+						"				<div class=\"card border-info mb-3\" >\r\n" + 
+						"					<div class=\"card-header\">Databeses entries : " + book.size() + " </div>\r\n" + 
+						"					<div class=\"card-body\">\r\n" + 
+						"					<h4 class=\"card-title\">Males : "+countMale+"<br>Females : " +countFemale +" </h4><table class=\"table table-hover\"> <tbody>");
 				
 				//String stringTable = book.readAllEntry();
 				String wordTable = "\"\"";
@@ -128,7 +135,7 @@ public class AddressBookServlet extends HttpServlet {
 			          
 						z=z+20;
 			          }
-					out.println("<tbody></table>");
+					out.println("</tbody></table></div></div></div></div></div>");
 		   			out.println("</body></html>");
 			        out.close();
 		}
