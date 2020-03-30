@@ -115,7 +115,7 @@ public class AddressBookServlet extends HttpServlet {
 						"		<div class=\"row\">\r\n" + 
 						"			<div class=\"col-lg-9\"><br><br><br><br>\r\n" + 
 						"				<div class=\"card border-info mb-3\" >\r\n" + 
-						"					<div class=\"card-header\">Databeses entries : " + book.size() + " Males : "+countMale+" Females :" +countFemale +" </div>\r\n" + 
+						"					<div class=\"card-header\">Databeses entries : " + book.size() + "<br> Males : "+countMale+" Females :" +countFemale +" </div>\r\n" + 
 						"					<div class=\"card-body\">\r\n" + 
 						"					<table class=\"table table-hover\"> <tbody>");
 				
