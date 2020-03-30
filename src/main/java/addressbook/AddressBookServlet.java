@@ -117,7 +117,8 @@ public class AddressBookServlet extends HttpServlet {
 						"				<div class=\"card border-info mb-3\" >\r\n" + 
 						"					<div class=\"card-header\">Databeses entries : " + book.size() + "<br> Males : "+countMale+"<br> Females :" +countFemale +" </div>\r\n" + 
 						"					<div class=\"card-body\">\r\n" + 
-						"					<table class=\"table table-hover\"> <tbody>");
+						"					   <div class=\"bs-component\">" +
+						"                         <table class=\"table table-hover\"> <tbody>");
 				
 				//String stringTable = book.readAllEntry();
 				String wordTable = "\"\"";
@@ -135,7 +136,7 @@ public class AddressBookServlet extends HttpServlet {
 			          
 						z=z+20;
 			          }
-					out.println("</tbody></table></div></div></div></div></div>");
+					out.println("</tbody></table></div></div></div></div></div></div>");
 		   			out.println("</body></html>");
 			        out.close();
 		}
