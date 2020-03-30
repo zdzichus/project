@@ -55,9 +55,17 @@
 	</div>
 </nav>
 	<div class="container">   
-	   	
+	 <div class="bs-docs-section">
+	       <div class="page-header">
+            <div class="row">
+             <div class="col-lg-12">
+              <h1 id="Forms">Simple Form - Entry Details: </h1>
+            </div>
+          </div>
+        </div>
 		
-		<h2> Simple Form - Entry details:</h2>
+	   <div class="row">
+          <div class="col-lg-7">
 		<form method="get" action="addressBookServlet">
 			<div class="form-group">
 				<label class="col-form-label" for="inputDefault">Name</label> <input
@@ -89,6 +97,9 @@
 
 			</div>
 		</form>
+	</div>
+	</div>
+	
 	</div>
 </body>
 </html>
