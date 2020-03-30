@@ -117,8 +117,20 @@ public class AddressBookServlet extends HttpServlet {
 						"				<div class=\"card border-info mb-3\" >\r\n" + 
 						"					<div class=\"card-header\">Databeses entries : " + book.size() + "<br> Males : "+countMale+"<br> Females :" +countFemale +" </div>\r\n" + 
 						"					<div class=\"card-body\">\r\n" + 
-						"					   <div class=\"bs-component\">" +
-						"                         <table class=\"table table-hover\"> <tbody>");
+					
+						"  <table class=\"table table-hover\">\r\n" + 
+						"  <thead>\r\n" + 
+						"    <tr>\r\n" + 
+						"      <th scope=\"col\">Name</th>\r\n" + 
+						"      <th scope=\"col\">Surname</th>\r\n" + 
+						"      <th scope=\"col\">Phone</th>\r\n" + 
+						"      <th scope=\"col\">City</th>\r\n" + 
+						"      <th scope=\"col\">Gender</th>\r\n" + 
+						"      <th scope=\"col\">Country</th>\r\n" + 
+						"      <th scope=\"col\">ID</th>\r\n" + 
+						"    </tr>\r\n" + 
+						"  </thead>\r\n" + 
+						"  <tbody>\r\n" );
 				
 				//String stringTable = book.readAllEntry();
 				String wordTable = "\"\"";
@@ -131,45 +143,19 @@ public class AddressBookServlet extends HttpServlet {
 				    int z= 0; 
 					for (int j=0; j< book.size(); j++) {
 						
-					out.println("<tr class=\"table-info\"><td>"+tempTable[z+9]+"</td> <td>"+tempTable[z+11]+"</td> <td>"+tempTable[z+13]+"</td> <td>"+
-					tempTable[z+15]+"</td><td>"+tempTable[z+17]+"</td> <td>"+tempTable[z+19]+"</td> <td>"+tempTable[z+5]+"</td></tr>");
-			          
+					out.println("    <tr class=\"table-active\">\r\n" + 
+		   					"      <td>"+tempTable[z+9]+"</td>\r\n" + 
+		   					"      <td>"+tempTable[z+11]+"</td>\r\n" + 
+		   					"      <td>"+tempTable[z+13]+"</td>\r\n" + 
+		   					"      <td>"+tempTable[z+15]+"</td>\r\n" + 
+		   					"      <td>"+tempTable[z+17]+"</td>\r\n" + 
+		   					"      <td>"+tempTable[z+19]+"</td>\r\n" + 
+		   					"      <td>"+tempTable[z+5]+"</td>\r\n" + 
+		   					"    </tr>\r\n"); 			          
 						z=z+20;
 			          }
-					out.println("</tbody></table></div></div></div></div></div></div>");
-		   			out.println("<table class=\"table table-hover\">\r\n" + 
-		   					"  <thead>\r\n" + 
-		   					"    <tr>\r\n" + 
-		   					"      <th scope=\"col\">Name</th>\r\n" + 
-		   					"      <th scope=\"col\">Surname</th>\r\n" + 
-		   					"      <th scope=\"col\">Phone</th>\r\n" + 
-		   					"      <th scope=\"col\">City</th>\r\n" + 
-		   					"      <th scope=\"col\">Gender</th>\r\n" + 
-		   					"      <th scope=\"col\">Country</th>\r\n" + 
-		   					"      <th scope=\"col\">ID</th>\r\n" + 
-		   					"    </tr>\r\n" + 
-		   					"  </thead>\r\n" + 
-		   					"  <tbody>\r\n" + 
-		   					"    <tr class=\"table-active\">\r\n" + 
-		   					"      <th scope=\"row\">Active</th>\r\n" + 
-		   					"      <td>Column content</td>\r\n" + 
-		   					"      <td>Column content</td>\r\n" + 
-		   					"      <td>Column content</td>\r\n" + 
-		   					"      <td>Column content</td>\r\n" + 
-		   					"      <td>Column content</td>\r\n" + 
-		   					"      <td>Column content</td>\r\n" + 
-		   					"    </tr>\r\n" + 
-		   					"    <tr>\r\n" + 
-		   					"      <th scope=\"row\">Default</th>\r\n" + 
-		   					"      <td>Column content</td>\r\n" + 
-		   					"      <td>Column content</td>\r\n" + 
-		   					"      <td>Column content</td>\r\n" + 
-		   					"      <td>Column content</td>\r\n" + 
-		   					"      <td>Column content</td>\r\n" + 
-		   					"      <td>Column content</td>\r\n" + 
-		   					"    </tr>\r\n" + 
-		   						   					"  </tbody>\r\n" + 
-		   					"</table> </body></html>");
+					out.println("</tbody>\r\n" + "</table></div></div></div></div></div>");
+		   			out.println("</body></html>");
 			        out.close();
 		}
 	}
