@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <link rel="stylesheet"
@@ -20,11 +21,13 @@
 	src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
 	integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
 	crossorigin="anonymous"></script>
+	<title>Application</title>
 </head>
 <body>
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
 	<div class="container">
 		<a href="../" class="navbar-brand">Bootswatch</a>
-		<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+		
 			<a class="navbar-brand" href="#">Application</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse"
 				data-target="#navbarColor01" aria-controls="navbarColor01"
@@ -49,13 +52,9 @@
 					<button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
 				</form>
 			</div>
-		</nav>
-
-		<meta charset="UTF-8">
-		<title>Application</title>
 	</div>
-	<div class="container">
-
+</nav>
+	<div class="container">      	
 		<h1>Simple Form</h1>
 		<h2>Entry details:</h2>
 		<form method="get" action="addressBookServlet">
