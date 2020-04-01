@@ -34,6 +34,11 @@ public class LoginBookServlet extends HttpServlet {
 			req.include(request, response);
 
 		} else {
+			
+			request.getParameter("comp");
+			request.getParameter("processor");
+			request.getParameter("ram");
+			
 			LoginBookMongo log = new LoginBookMongo();
 			log.addRows(processor, ram);
 			log.addRows(comp, null);
