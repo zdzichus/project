@@ -35,7 +35,7 @@ public class LoginBookMongo {
 		}
 	}
 	
-	public void addRows(String first, String second) {
+	public void addRows(String processor, String ram) {
 		addressCollection.insert(new BasicDBObject());
         
 	}
