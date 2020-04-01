@@ -1,13 +1,16 @@
 package addressbook;
 
 import java.net.UnknownHostException;
+import java.util.ArrayList;
 
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;
+import com.mongodb.DBObject;
 import com.mongodb.Mongo;
 import com.mongodb.MongoException;
+import com.sun.tools.javac.util.List;
 
 public class LoginBookMongo {
 	
@@ -35,9 +38,10 @@ public class LoginBookMongo {
 		}
 	}
 	
-	public void addRows(String processor, String ram) {
+	public void addRows(String processor, String ram, String comp) {
 		addressCollection.insert(new BasicDBObject());
         
+	
 	}
 
 	public String readAllComp() {
