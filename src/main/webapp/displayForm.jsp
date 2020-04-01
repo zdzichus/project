@@ -69,20 +69,23 @@
 						<form method="get" action="loginBookServlet">
 
 							<div class="form-group">
-
-
+                                
+                                 <label class="col-form-label" for="inputDefault">Comp</label>
 								<input type="text" name="comp" class="form-control"><br>
-								<label class="col-form-label" for="inputDefault">Comp</label>
-								
-								<input	type="text" name="processor" class="form-control"><br>
+							
 								<label class="col-form-label" for="inputDefault">Processor</label>
-
+								<input	type="text" name="processor" class="form-control"><br>
+							
+                                 <label class="col-form-label" for="inputDefault">RAM</label>
 								<input type="text" name="ram" class="form-control"><br>
-								<label class="col-form-label" for="inputDefault">RAM</label>
+								
 
 
 							</div>
+	                         <div>
+							<button type="submit" class="btn btn-primary">Submit</button>
 
+						</div>
 
 
 
