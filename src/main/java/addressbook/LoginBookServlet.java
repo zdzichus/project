@@ -11,25 +11,35 @@ import javax.servlet.http.HttpServletResponse;
 
 
 public class LoginBookServlet extends HttpServlet {
-	LoginBookMongo log = new LoginBookMongo();
+
 	
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html; charset=UTF-8");
 		PrintWriter out = response.getWriter();
-		String login = request.getParameter("login");
-		String pass = request.getParameter("pass");
-	
-		if (login.equals("admin") && pass.equals("kwiatek33")) {
+		String comp = request.getParameter("comp");
+		String processor = request.getParameter("processor");
+		String ram = request.getParameter("ram");
+        
+		LoginBook computer = new LoginBook();
+		computer.setComp(comp);
+		computer.setProcessor(processor);
+		computer.setRam(ram);
+		
+		
+		if (comp.isEmpty() || processor.isEmpty() || ram.isEmpty() ) {
 			
-			RequestDispatcher req = request.getRequestDispatcher("form.jsp");
+			RequestDispatcher req = request.getRequestDispatcher("displayForm.jsp");
 			req.include(request, response);
 
 		} else {
-			       
-			 RequestDispatcher req = request.getRequestDispatcher("index.jsp");
-			 req.include(request, response);
+			LoginBookMongo log = new LoginBookMongo();
+			log.addRows(processor, ram);
+			log.addRows(comp, null);
+			out.println("wyniki :" + log.readAllComp()  + " " );     
+	      	
+			
 		}
 		
 

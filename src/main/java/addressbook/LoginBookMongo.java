@@ -2,8 +2,10 @@ package addressbook;
 
 import java.net.UnknownHostException;
 
+import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
+import com.mongodb.DBCursor;
 import com.mongodb.Mongo;
 import com.mongodb.MongoException;
 
@@ -23,8 +25,8 @@ public class LoginBookMongo {
 			Mongo mongo = new Mongo(host, port);
 			DB db = mongo.getDB(dbName);
 			db.authenticate(dbUser, dbPassword.toCharArray());
-			DBCollection address = db.getCollection("login");
-			return address;
+			DBCollection add = db.getCollection("login");
+			return add;
 		} catch (UnknownHostException e) {
 			throw new RuntimeException(e);
 		} catch (MongoException e) {
@@ -33,8 +35,27 @@ public class LoginBookMongo {
 		}
 	}
 	
-	
-	
+	public void addRows(String first, String second) {
+		addressCollection.insert(new BasicDBObject());
+        
+	}
+
+	public String readAllComp() {
+
+		StringBuilder items = new StringBuilder();
+		DBCursor cursor = addressCollection.find();
+		try {
+			while (cursor.hasNext()) {
+				items.append(cursor.next().toString());
+
+			}
+		} finally {
+
+			cursor.close();
+		}
+		return items.toString();
+
+	}
 	
 	
 
