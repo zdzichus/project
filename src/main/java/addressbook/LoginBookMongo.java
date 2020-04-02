@@ -41,14 +41,14 @@ public class LoginBookMongo {
 	}
 	
 		
-	
 	public void addRows(String processor, String ram, String comp) {
-		String Id = "Id";
-		int i =0 ;
-		 addressCollection.insert(new BasicDBObject().append(Id,i).append("processor", processor).append("Comp", comp).append("RAM", ram));
-        i++;
+		 
+		 long id = addressCollection.getCount();
+		 addressCollection.insert(new BasicDBObject().append("Id",id).append("processor", processor).append("Comp", comp).append("RAM", ram));
+       
 	
 	}
+	
 
 	public String readAllComp() {
 
