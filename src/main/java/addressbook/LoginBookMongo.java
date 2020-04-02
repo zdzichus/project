@@ -43,8 +43,10 @@ public class LoginBookMongo {
 		
 	
 	public void addRows(String processor, String ram, String comp) {
-		 addressCollection.insert(new BasicDBObject().append("processor", processor).append("Comp", comp).append("RAM", ram));
-        
+		String Id = "Id";
+		int i =0 ;
+		 addressCollection.insert(new BasicDBObject().append(Id,i).append("processor", processor).append("Comp", comp).append("RAM", ram));
+        i++;
 	
 	}
 

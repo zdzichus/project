@@ -21,7 +21,7 @@ public class LoginBookServlet extends HttpServlet {
 		String comp = request.getParameter("comp");
 		String processor = request.getParameter("processor");
 		String ram = request.getParameter("ram");
-		String id = "id";
+	
         
 		LoginBook computer = new LoginBook();
 		computer.setComp(comp);
@@ -36,11 +36,8 @@ public class LoginBookServlet extends HttpServlet {
 
 		} else {
 			LoginBookMongo log = new LoginBookMongo();
-							
-						
 			log.addRows(request.getParameter("processor"), request.getParameter("ram"), request.getParameter("comp"));
-		
-			out.println("wyniki :" + log.readAllComp()  + " " );     
+		    out.println("wyniki :" + log.readAllComp()  + " " );     
 	      	
 			
 		}
