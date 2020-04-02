@@ -2,7 +2,9 @@ package addressbook;
 
 import java.net.UnknownHostException;
 import java.util.ArrayList;
+import java.util.Collection;
 
+import com.mongodb.BasicDBList;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
@@ -38,8 +40,10 @@ public class LoginBookMongo {
 		}
 	}
 	
+		
+	
 	public void addRows(String processor, String ram, String comp) {
-		addressCollection.insert(new BasicDBObject());
+		 addressCollection.insert(new BasicDBObject().append("processor", processor).append("Comp", comp).append("RAM", ram));
         
 	
 	}

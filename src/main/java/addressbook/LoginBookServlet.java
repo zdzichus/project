@@ -37,6 +37,7 @@ public class LoginBookServlet extends HttpServlet {
 		} else {
 			LoginBookMongo log = new LoginBookMongo();
 							
+						
 			log.addRows(request.getParameter("processor"), request.getParameter("ram"), request.getParameter("comp"));
 		
 			out.println("wyniki :" + log.readAllComp()  + " " );     
